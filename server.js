@@ -62,7 +62,16 @@ const requestHandler = async (req,res) => {
       const p = url.searchParams.get('__path');
       effectivePath = p.startsWith('/') ? p : '/api/' + p;
     }
-    const route = effectivePath.startsWith('/api') ? effectivePath : '/api' + (effectivePath === '/' ? '' : effectivePath);
+    if (req.method === 'GET' && (effectivePath === '/' || url.pathname === '/')) {
+      const file = safeFile('/');
+      if (file && fs.existsSync(file)) {
+        res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+        return fs.createReadStream(file).pipe(res);
+      }
+      res.writeHead(302, { 'Location': '/index.html' });
+      return res.end();
+    }
+    const route = effectivePath.startsWith('/api') ? effectivePath : '/api' + (effectivePath.startsWith('/') ? effectivePath : '/' + effectivePath);
     if (req.method==='GET' && (route==='/api' || route==='/api/health')) return json(res,200,{status:'ok',mode:'synthetic-local-demo',time:now});
     if (req.method==='GET' && route==='/api/dashboard') return json(res,200,dashboard());
     if (req.method==='GET' && route==='/api/assets') return json(res,200,assets.map(publicAsset));
