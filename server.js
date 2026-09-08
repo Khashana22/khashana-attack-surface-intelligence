@@ -3,6 +3,7 @@ const http = require('node:http');
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
+const { generateExecutiveReport } = require('./lib/report-pdf');
 
 const PORT = Number(process.env.PORT || 3000);
 const ROOT = __dirname;
@@ -46,9 +47,6 @@ function body(req) {
   return new Promise((resolve,reject)=>{ let data=''; req.on('data',c=>{data+=c;if(data.length>100000) req.destroy();}); req.on('end',()=>{try{resolve(data?JSON.parse(data):{});}catch(e){reject(e);}}); });
 }
 function safeFile(urlPath) { const p = path.normalize(path.join(ROOT,'public',urlPath === '/' ? 'index.html' : urlPath)); return p.startsWith(path.join(ROOT,'public')) ? p : null; }
-function pdf(text) { const clean=text.replace(/[()\\]/g,'').slice(0,1200); const content=`BT /F1 18 Tf 50 760 Td (Khashana Attack Surface Intelligence) Tj 0 -28 Td /F1 11 Tf (SIMULATED SECURITY ASSESSMENT - Northstar Labs) Tj 0 -34 Td (${clean}) Tj 0 -38 Td (Prepared by Sayed Khashana | Web & API Security Researcher) Tj ET`;
-  const objs=['<< /Type /Catalog /Pages 2 0 R >>','<< /Type /Pages /Kids [3 0 R] /Count 1 >>','<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>','<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>',`<< /Length ${Buffer.byteLength(content)} >>\nstream\n${content}\nendstream`];
-  let out='%PDF-1.4\n', offsets=[0]; objs.forEach((o,i)=>{offsets.push(Buffer.byteLength(out));out+=`${i+1} 0 obj\n${o}\nendobj\n`;}); const xref=Buffer.byteLength(out);out+=`xref\n0 ${objs.length+1}\n0000000000 65535 f \n`+offsets.slice(1).map(x=>String(x).padStart(10,'0')+' 00000 n \n').join('')+`trailer\n<< /Size ${objs.length+1} /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF`; return Buffer.from(out); }
 const requestHandler = async (req,res) => {
   const host = req.headers.host || 'localhost';
   const url = new URL(req.url,`http://${host}`); const headers={'X-Content-Type-Options':'nosniff','X-Frame-Options':'DENY','Referrer-Policy':'no-referrer','Permissions-Policy':'geolocation=(), microphone=(), camera=()','Content-Security-Policy':"default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:"}; Object.entries(headers).forEach(([k,v])=>res.setHeader(k,v));
@@ -79,9 +77,20 @@ const requestHandler = async (req,res) => {
     if ((req.method === 'GET' || req.method === 'HEAD') && route === '/api/findings') return json(res, 200, findings);
     if (req.method === 'POST' && route === '/api/scans') { const data = await body(req); if (!String(data.target || '').endsWith('.local')) return json(res, 403, { error: 'Local-lab-only policy: targets must end in .local. No scan was performed.' }); return json(res, 202, { id: crypto.randomUUID(), status: 'completed', target: data.target, message: 'Synthetic local-lab fixture normalized. No network scan was executed.' }); }
     if (req.method === 'POST' && /^\/api\/findings\/[^/]+\/review$/.test(route)) { const id = route.split('/')[3], data = await body(req), finding = findings.find(f => f.id === id); if (!finding) return json(res, 404, { error: 'Finding not found' }); const allowed = ['Validated', 'False Positive', 'Needs Validation', 'Accepted Risk', 'Remediated', 'Retest Required', 'Closed']; if (data.status && !allowed.includes(data.status)) return json(res, 400, { error: 'Invalid finding state' }); finding.status = data.status || finding.status; finding.notes = String(data.notes || '').slice(0, 4000); finding.validation = String(data.validation || '').slice(0, 4000); reviews[id] = { ...data, updatedAt: new Date().toISOString() }; return json(res, 200, { finding, review: reviews[id] }); }
-    if ((req.method === 'GET' || req.method === 'HEAD') && route === '/api/reports/executive.pdf') { const d = dashboard(); const report = pdf(`Executive summary: ${d.metrics.assets} assets observed; ${d.metrics.openFindings} open findings; highest priority: ${findings[1].id} on dev.northstar.local needs researcher validation.`); res.writeHead(200, { 'Content-Type': 'application/pdf', 'Content-Disposition': 'attachment; filename="northstar-executive-report.pdf"', 'Content-Length': report.length }); if (req.method === 'HEAD') return res.end(); return res.end(report); }
+    if ((req.method === 'GET' || req.method === 'HEAD') && (route === '/api/reports/executive.pdf' || route === '/api/report.pdf' || route === '/api/northstar-executive-report.pdf')) {
+      const d = dashboard();
+      const report = generateExecutiveReport(d);
+      res.writeHead(200, {
+        'Content-Type': 'application/pdf',
+        'Content-Disposition': 'inline; filename="northstar-executive-report.pdf"',
+        'Content-Length': report.length,
+        'Cache-Control': 'public, max-age=300'
+      });
+      if (req.method === 'HEAD') return res.end();
+      return res.end(report);
+    }
     if (req.method !== 'GET' && req.method !== 'HEAD') return json(res, 405, { error: 'Method not allowed' });
-    const file = safeFile(url.pathname); if (!file || !fs.existsSync(file)) return json(res, 404, { error: 'Not found' }); const ext = path.extname(file); const types = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.svg': 'image/svg+xml' }; res.writeHead(200, { 'Content-Type': types[ext] || 'application/octet-stream' }); if (req.method === 'HEAD') return res.end(); fs.createReadStream(file).pipe(res);
+    const file = safeFile(url.pathname); if (!file || !fs.existsSync(file)) return json(res, 404, { error: 'Not found' }); const ext = path.extname(file); const types = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.svg': 'image/svg+xml', '.pdf': 'application/pdf' }; res.writeHead(200, { 'Content-Type': types[ext] || 'application/octet-stream' }); if (req.method === 'HEAD') return res.end(); fs.createReadStream(file).pipe(res);
   } catch(err) { json(res,400,{error: err.message || 'Invalid request'}); }
 };
 const server = http.createServer(requestHandler);
@@ -90,5 +99,6 @@ requestHandler.server = server;
 requestHandler.risk = risk;
 requestHandler.assets = assets;
 requestHandler.findings = findings;
+requestHandler.generateExecutiveReport = generateExecutiveReport;
 module.exports = requestHandler;
 

@@ -1,0 +1,3098 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [8 0 R 10 0 R 12 0 R 14 0 R 16 0 R 18 0 R 20 0 R 22 0 R 24 0 R] /Count 9 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Oblique >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier-Bold >>
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R /F5 7 0 R >> >> /Contents 9 0 R >>
+endobj
+9 0 obj
+<< /Length 4212 >>
+stream
+q
+0.75 w
+0.04 0.08 0.16 rg
+0 680 612 112 re
+f
+Q
+q
+0.75 w
+0.14 0.45 0.91 rg
+0 676 612 4 re
+f
+Q
+BT
+/F2 8 Tf
+0.38 0.65 0.98 rg
+44 742 Td
+(CONFIDENTIAL // CLIENT DELIVERABLE // STRICTLY CONTROLLED) Tj
+ET
+BT
+/F2 24 Tf
+1 1 1 rg
+44 712 Td
+(SECURITY ASSESSMENT REPORT) Tj
+ET
+BT
+/F1 12 Tf
+0.82 0.88 0.96 rg
+44 692 Td
+(External Attack Surface Discovery & Vulnerability Prioritization) Tj
+ET
+q
+1 w
+0.96 0.97 0.99 rg
+0.82 0.87 0.94 RG
+44 580 524 70 re
+B
+Q
+BT
+/F2 9 Tf
+0.14 0.45 0.91 rg
+62 628 Td
+(TARGET ORGANIZATION & SCOPE) Tj
+ET
+BT
+/F2 16 Tf
+0.08 0.12 0.2 rg
+62 608 Td
+(Northstar Labs — *.northstar.local) Tj
+ET
+BT
+/F1 9 Tf
+0.4 0.46 0.55 rg
+62 592 Td
+(Controlled Training Environment · Simulated Assessment · Non-Destructive Testing) Tj
+ET
+q
+1 w
+1 1 1 rg
+0.85 0.88 0.92 RG
+44 290 524 260 re
+B
+Q
+q
+0.75 w
+0.08 0.13 0.22 rg
+44 515 524 35 re
+f
+Q
+BT
+/F2 10 Tf
+1 1 1 rg
+60 528 Td
+(ENGAGEMENT METADATA & RESEARCHER ATTESTATION) Tj
+ET
+q
+0.5 w
+0.92 0.94 0.97 RG
+56 489 m
+556 489 l
+S
+Q
+BT
+/F2 8.5 Tf
+0.25 0.3 0.4 rg
+60 494 Td
+(Assessment Type:) Tj
+ET
+BT
+/F1 8.5 Tf
+0.1 0.15 0.25 rg
+204 494 Td
+(External Attack Surface & Vulnerability Assessment) Tj
+ET
+q
+0.5 w
+0.92 0.94 0.97 RG
+56 469 m
+556 469 l
+S
+Q
+BT
+/F2 8.5 Tf
+0.25 0.3 0.4 rg
+60 474 Td
+(Target Organization:) Tj
+ET
+BT
+/F1 8.5 Tf
+0.1 0.15 0.25 rg
+204 474 Td
+(Northstar Labs \(Fictional Enterprise / Lab Environment\)) Tj
+ET
+q
+0.5 w
+0.92 0.94 0.97 RG
+56 449 m
+556 449 l
+S
+Q
+BT
+/F2 8.5 Tf
+0.25 0.3 0.4 rg
+60 454 Td
+(Authorized Scope:) Tj
+ET
+BT
+/F1 8.5 Tf
+0.1 0.15 0.25 rg
+204 454 Td
+(*.northstar.local \(Production, Staging, Dev, Admin\)) Tj
+ET
+q
+0.5 w
+0.92 0.94 0.97 RG
+56 429 m
+556 429 l
+S
+Q
+BT
+/F2 8.5 Tf
+0.25 0.3 0.4 rg
+60 434 Td
+(Lead Researcher:) Tj
+ET
+BT
+/F1 8.5 Tf
+0.1 0.15 0.25 rg
+204 434 Td
+(Sayed Khashana) Tj
+ET
+q
+0.5 w
+0.92 0.94 0.97 RG
+56 409 m
+556 409 l
+S
+Q
+BT
+/F2 8.5 Tf
+0.25 0.3 0.4 rg
+60 414 Td
+(Professional Role:) Tj
+ET
+BT
+/F1 8.5 Tf
+0.1 0.15 0.25 rg
+204 414 Td
+(Web & API Security Researcher) Tj
+ET
+q
+0.5 w
+0.92 0.94 0.97 RG
+56 389 m
+556 389 l
+S
+Q
+BT
+/F2 8.5 Tf
+0.25 0.3 0.4 rg
+60 394 Td
+(Assessment Date:) Tj
+ET
+BT
+/F1 8.5 Tf
+0.1 0.15 0.25 rg
+204 394 Td
+(08 September 2026) Tj
+ET
+q
+0.5 w
+0.92 0.94 0.97 RG
+56 369 m
+556 369 l
+S
+Q
+BT
+/F2 8.5 Tf
+0.25 0.3 0.4 rg
+60 374 Td
+(Classification:) Tj
+ET
+BT
+/F1 8.5 Tf
+0.1 0.15 0.25 rg
+204 374 Td
+(CONFIDENTIAL / CLIENT DELIVERABLE) Tj
+ET
+q
+0.5 w
+0.92 0.94 0.97 RG
+56 349 m
+556 349 l
+S
+Q
+BT
+/F2 8.5 Tf
+0.25 0.3 0.4 rg
+60 354 Td
+(Methodology Framework:) Tj
+ET
+BT
+/F1 8.5 Tf
+0.1 0.15 0.25 rg
+204 354 Td
+(OWASP Top 10:2021 · NIST SP 800-115 · Khashana ASI) Tj
+ET
+q
+0.5 w
+0.92 0.94 0.97 RG
+56 329 m
+556 329 l
+S
+Q
+BT
+/F2 8.5 Tf
+0.25 0.3 0.4 rg
+60 334 Td
+(Report Version:) Tj
+ET
+BT
+/F1 8.5 Tf
+0.1 0.15 0.25 rg
+204 334 Td
+(1.0 — Final Assessment Deliverable) Tj
+ET
+q
+0.5 w
+0.92 0.94 0.97 RG
+56 309 m
+556 309 l
+S
+Q
+BT
+/F2 8.5 Tf
+0.25 0.3 0.4 rg
+60 314 Td
+(Dynamic Dataset Mode:) Tj
+ET
+BT
+/F1 8.5 Tf
+0.1 0.15 0.25 rg
+204 314 Td
+(Live Synthetic Telemetry · Zero Third-Party Scanning) Tj
+ET
+q
+1 w
+0.98 0.98 0.99 rg
+0.88 0.9 0.94 RG
+44 80 524 180 re
+B
+Q
+BT
+/F2 9 Tf
+0.18 0.25 0.38 rg
+60 238 Td
+(DISCLAIMER & LEGAL BOUNDARIES) Tj
+ET
+BT
+/F1 8 Tf
+0.35 0.4 0.48 rg
+60 218 Td
+(This security assessment report is a controlled deliverable prepared for Northstar Labs as part of an external exposure review.) Tj
+ET
+BT
+/F1 8 Tf
+0.35 0.4 0.48 rg
+60 205 Td
+(All observations, vulnerabilities, hostnames, IP allocations, and findings contained herein were established from authorized) Tj
+ET
+BT
+/F1 8 Tf
+0.35 0.4 0.48 rg
+60 192 Td
+(synthetic local-lab telemetry. No unauthorized network probes or third-party infrastructure scans were conducted.) Tj
+ET
+BT
+/F1 8 Tf
+0.35 0.4 0.48 rg
+60 179 Td
+() Tj
+ET
+BT
+/F1 8 Tf
+0.35 0.4 0.48 rg
+60 166 Td
+(The assessment applies the principle of Human Security Validation: automated scanner detections are treated as hypotheses) Tj
+ET
+BT
+/F1 8 Tf
+0.35 0.4 0.48 rg
+60 153 Td
+(until verified by a security researcher. Remediation recommendations prioritize business context and defensive depth.) Tj
+ET
+BT
+/F1 8 Tf
+0.35 0.4 0.48 rg
+60 140 Td
+() Tj
+ET
+BT
+/F1 8 Tf
+0.35 0.4 0.48 rg
+60 127 Td
+(Attestation: This report was compiled and verified by Sayed Khashana \(Web & API Security Researcher\).) Tj
+ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R /F5 7 0 R >> >> /Contents 11 0 R >>
+endobj
+11 0 obj
+<< /Length 5088 >>
+stream
+BT
+/F2 16 Tf
+0.08 0.15 0.3 rg
+44 720 Td
+(1. Executive Summary) Tj
+ET
+q
+1 w
+0.99 0.96 0.9 rg
+0.9 0.65 0.2 RG
+44 642 524 54 re
+B
+Q
+BT
+/F2 8.5 Tf
+0.75 0.45 0.05 rg
+58 680 Td
+(1.1 OVERALL RISK RATING) Tj
+ET
+BT
+/F2 12 Tf
+0.55 0.25 0.02 rg
+58 660 Td
+(MEDIUM-HIGH EXPOSURE \(Score: 68 / 100 on High-Criticality Assets\)) Tj
+ET
+q
+0.5 w
+0.99 0.96 0.9 rg
+0.92 0.65 0.2 RG
+458 658 90 13 re
+B
+Q
+BT
+/F2 7.5 Tf
+0.75 0.45 0.05 rg
+464 661.5 Td
+(Needs Attention) Tj
+ET
+BT
+/F2 11 Tf
+0.1 0.18 0.32 rg
+44 622 Td
+(1.1.1 Overall Security Posture) Tj
+ET
+BT
+/F1 8.5 Tf
+0.2 0.25 0.32 rg
+44 606 Td
+(Northstar Labs demonstrates a hardened posture on its core production tier, with enforced TLS 1.3 encryption and reverse proxy) Tj
+ET
+BT
+/F1 8.5 Tf
+0.2 0.25 0.32 rg
+44 593 Td
+(segmentation on public application endpoints. However, continuous attack surface monitoring revealed notable perimeter drift: two) Tj
+ET
+BT
+/F1 8.5 Tf
+0.2 0.25 0.32 rg
+44 580 Td
+(unannounced assets \(staging.northstar.local and dev.northstar.local\) expanded the external footprint by 50% between 01 Sep and 08 Sep.) Tj
+ET
+BT
+/F1 8.5 Tf
+0.2 0.25 0.32 rg
+44 567 Td
+(The exposure of an unauthenticated Vite/Node.js development server running on port 3000 represents the primary tactical concern, while) Tj
+ET
+BT
+/F1 8.5 Tf
+0.2 0.25 0.32 rg
+44 554 Td
+(missing Content Security Policies on staging reflect configuration drift across release branches.) Tj
+ET
+BT
+/F2 11 Tf
+0.1 0.18 0.32 rg
+44 531 Td
+(1.1.2 Attack Chain Analysis) Tj
+ET
+q
+0.75 w
+0.97 0.98 0.99 rg
+0.85 0.88 0.93 RG
+44 467 524 48 re
+B
+Q
+BT
+/F2 9 Tf
+0.15 0.25 0.4 rg
+56 497 Td
+(No end-to-end attack chain was substantiated from the available evidence.) Tj
+ET
+BT
+/F1 8 Tf
+0.35 0.4 0.48 rg
+56 483 Td
+(While development debug routes and missing staging CSP headers were evidenced, pivoting into internal database clusters or) Tj
+ET
+BT
+/F1 8 Tf
+0.35 0.4 0.48 rg
+56 472 Td
+(bypassing production authentication was not observed in the provided telemetry.) Tj
+ET
+BT
+/F2 11 Tf
+0.1 0.18 0.32 rg
+44 451 Td
+(1.1.3 Defensive Controls Verified \(What Worked\)) Tj
+ET
+BT
+/F1 8.5 Tf
+0.15 0.45 0.25 rg
+44 435 Td
+(• TLS 1.3 Transport Hardening: Production hosts app.northstar.local and api.northstar.local reject legacy ciphers and SSLv3/TLS 1.0/1.1.) Tj
+ET
+BT
+/F1 8.5 Tf
+0.15 0.45 0.25 rg
+44 421 Td
+(• Privileged Portal Authentication: admin.northstar.local enforces immediate HTTP 302 redirection to secure authentication.) Tj
+ET
+BT
+/F1 8.5 Tf
+0.15 0.45 0.25 rg
+44 407 Td
+(• Verified Legacy TLS Remediation: Staging TLS was successfully upgraded from legacy TLS 1.1 to enforced TLS 1.2+ \(verified via retest\).) Tj
+ET
+BT
+/F2 11 Tf
+0.1 0.18 0.32 rg
+44 383 Td
+(1.2 Risk Analytics & Finding Distribution) Tj
+ET
+q
+0.75 w
+0.99 0.92 0.92 rg
+0.85 0.88 0.92 RG
+44 303 96.8 62 re
+B
+Q
+BT
+/F2 8.5 Tf
+0.75 0.15 0.15 rg
+54 349 Td
+(Critical) Tj
+ET
+BT
+/F2 22 Tf
+0.75 0.15 0.15 rg
+54 323 Td
+(0) Tj
+ET
+BT
+/F1 7.5 Tf
+0.4 0.45 0.52 rg
+54 311 Td
+(0 Active) Tj
+ET
+q
+0.75 w
+0.99 0.93 0.93 rg
+0.85 0.88 0.92 RG
+150.8 303 96.8 62 re
+B
+Q
+BT
+/F2 8.5 Tf
+0.85 0.25 0.25 rg
+160.8 349 Td
+(High) Tj
+ET
+BT
+/F2 22 Tf
+0.85 0.25 0.25 rg
+160.8 323 Td
+(1) Tj
+ET
+BT
+/F1 7.5 Tf
+0.4 0.45 0.52 rg
+160.8 311 Td
+(1 Need Val) Tj
+ET
+q
+0.75 w
+0.99 0.96 0.9 rg
+0.85 0.88 0.92 RG
+257.6 303 96.8 62 re
+B
+Q
+BT
+/F2 8.5 Tf
+0.8 0.5 0.1 rg
+267.6 349 Td
+(Medium) Tj
+ET
+BT
+/F2 22 Tf
+0.8 0.5 0.1 rg
+267.6 323 Td
+(2) Tj
+ET
+BT
+/F1 7.5 Tf
+0.4 0.45 0.52 rg
+267.6 311 Td
+(1 Valid / 1 Rem) Tj
+ET
+q
+0.75 w
+0.91 0.97 0.93 rg
+0.85 0.88 0.92 RG
+364.4 303 96.8 62 re
+B
+Q
+BT
+/F2 8.5 Tf
+0.15 0.55 0.35 rg
+374.4 349 Td
+(Low / Info) Tj
+ET
+BT
+/F2 22 Tf
+0.15 0.55 0.35 rg
+374.4 323 Td
+(1) Tj
+ET
+BT
+/F1 7.5 Tf
+0.4 0.45 0.52 rg
+374.4 311 Td
+(1 Accepted) Tj
+ET
+q
+0.75 w
+0.92 0.95 0.99 rg
+0.85 0.88 0.92 RG
+471.2 303 96.8 62 re
+B
+Q
+BT
+/F2 8.5 Tf
+0.14 0.45 0.91 rg
+481.2 349 Td
+(Total Assets) Tj
+ET
+BT
+/F2 22 Tf
+0.14 0.45 0.91 rg
+481.2 323 Td
+(6) Tj
+ET
+BT
+/F1 7.5 Tf
+0.4 0.45 0.52 rg
+481.2 311 Td
+(6 Live Observed) Tj
+ET
+BT
+/F2 9.5 Tf
+0.15 0.2 0.3 rg
+44 281 Td
+(Summary of Validated Attack Surface Metrics) Tj
+ET
+q
+0.75 w
+1 1 1 rg
+0.85 0.88 0.92 RG
+44 219 524 48 re
+B
+Q
+BT
+/F1 8 Tf
+0.2 0.25 0.3 rg
+54 251 Td
+(Total Observed Hosts: 6 | Monitored IP Space: 172.28.0.11 - 172.28.0.16 | Open Services: 443/https, 80/http, 3000/http) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.3 rg
+54 237 Td
+(Open Findings: 3 | Verified Closed: 1 | Accepted Operational Risk: 1 | Highest Asset Risk Score: 71/100 \(admin.northstar.local\)) Tj
+ET
+BT
+/F2 8 Tf
+0.14 0.45 0.91 rg
+54 225 Td
+(Assessment Conclusion: Prioritize isolation of dev.northstar.local:3000 before proceeding to SOC 2 external audit.) Tj
+ET
+BT
+/F2 7.5 Tf
+0.35 0.42 0.52 rg
+44 754 Td
+(Khashana Attack Surface Intelligence | Security Assessment Report) Tj
+ET
+BT
+/F1 7.5 Tf
+0.35 0.42 0.52 rg
+398 754 Td
+(Target: Northstar Labs \(*.northstar.local\)) Tj
+ET
+q
+0.75 w
+0.85 0.88 0.92 RG
+44 746 m
+568 746 l
+S
+Q
+q
+0.75 w
+0.85 0.88 0.92 RG
+44 46 m
+568 46 l
+S
+Q
+BT
+/F3 7.5 Tf
+0.45 0.5 0.6 rg
+44 34 Td
+(CONFIDENTIAL // Prepared by Sayed Khashana — Web & API Security Researcher) Tj
+ET
+BT
+/F2 7.5 Tf
+0.25 0.3 0.4 rg
+513 34 Td
+(Page 2 of 9) Tj
+ET
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R /F5 7 0 R >> >> /Contents 13 0 R >>
+endobj
+13 0 obj
+<< /Length 6845 >>
+stream
+BT
+/F2 16 Tf
+0.08 0.15 0.3 rg
+44 720 Td
+(2. Scope & Technical Architecture) Tj
+ET
+BT
+/F2 11 Tf
+0.1 0.18 0.32 rg
+44 700 Td
+(2.1 Engagement Scope & Asset Ledger) Tj
+ET
+BT
+/F1 8.5 Tf
+0.35 0.4 0.48 rg
+44 684 Td
+(The assessment was strictly confined to assets within the *.northstar.local domain namespace.) Tj
+ET
+q
+0.75 w
+0.09 0.15 0.26 rg
+44 652 524 18 re
+f
+Q
+BT
+/F2 8 Tf
+1 1 1 rg
+50 657 Td
+(Hostname) Tj
+ET
+BT
+/F2 8 Tf
+1 1 1 rg
+185 657 Td
+(IP Address) Tj
+ET
+BT
+/F2 8 Tf
+1 1 1 rg
+260 657 Td
+(Environment) Tj
+ET
+BT
+/F2 8 Tf
+1 1 1 rg
+335 657 Td
+(Ports / Tech) Tj
+ET
+BT
+/F2 8 Tf
+1 1 1 rg
+470 657 Td
+(Criticality) Tj
+ET
+BT
+/F2 8 Tf
+1 1 1 rg
+525 657 Td
+(Risk) Tj
+ET
+q
+0.5 w
+0.97 0.98 0.99 rg
+0.88 0.9 0.94 RG
+44 634 524 18 re
+B
+Q
+BT
+/F2 7.5 Tf
+0.15 0.2 0.28 rg
+50 639 Td
+(app.northstar.local) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+185 639 Td
+(172.28.0.11) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+260 639 Td
+(Production) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+335 639 Td
+(443 \(Next.js, nginx\)) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+470 639 Td
+(5 / 5) Tj
+ET
+BT
+/F1 7.5 Tf
+0.75 0.15 0.15 rg
+525 639 Td
+(68 High) Tj
+ET
+q
+0.5 w
+1 1 1 rg
+0.88 0.9 0.94 RG
+44 616 524 18 re
+B
+Q
+BT
+/F2 7.5 Tf
+0.15 0.2 0.28 rg
+50 621 Td
+(api.northstar.local) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+185 621 Td
+(172.28.0.12) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+260 621 Td
+(Production) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+335 621 Td
+(443 \(Node.js, Express\)) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+470 621 Td
+(5 / 5) Tj
+ET
+BT
+/F1 7.5 Tf
+0.75 0.15 0.15 rg
+525 621 Td
+(68 High) Tj
+ET
+q
+0.5 w
+0.97 0.98 0.99 rg
+0.88 0.9 0.94 RG
+44 598 524 18 re
+B
+Q
+BT
+/F2 7.5 Tf
+0.15 0.2 0.28 rg
+50 603 Td
+(admin.northstar.local) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+185 603 Td
+(172.28.0.13) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+260 603 Td
+(Administrative) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+335 603 Td
+(443 \(React, nginx\)) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+470 603 Td
+(5 / 5) Tj
+ET
+BT
+/F1 7.5 Tf
+0.75 0.15 0.15 rg
+525 603 Td
+(71 High) Tj
+ET
+q
+0.5 w
+1 1 1 rg
+0.88 0.9 0.94 RG
+44 580 524 18 re
+B
+Q
+BT
+/F2 7.5 Tf
+0.15 0.2 0.28 rg
+50 585 Td
+(staging.northstar.local) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+185 585 Td
+(172.28.0.14) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+260 585 Td
+(Staging) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+335 585 Td
+(80, 443 \(Next.js, nginx\)) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+470 585 Td
+(3 / 5) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+525 585 Td
+(59 Medium) Tj
+ET
+q
+0.5 w
+0.97 0.98 0.99 rg
+0.88 0.9 0.94 RG
+44 562 524 18 re
+B
+Q
+BT
+/F2 7.5 Tf
+0.15 0.2 0.28 rg
+50 567 Td
+(dev.northstar.local) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+185 567 Td
+(172.28.0.15) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+260 567 Td
+(Development) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+335 567 Td
+(3000 \(Vite, Node.js\)) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+470 567 Td
+(2 / 5) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+525 567 Td
+(52 Medium) Tj
+ET
+q
+0.5 w
+1 1 1 rg
+0.88 0.9 0.94 RG
+44 544 524 18 re
+B
+Q
+BT
+/F2 7.5 Tf
+0.15 0.2 0.28 rg
+50 549 Td
+(docs.northstar.local) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+185 549 Td
+(172.28.0.16) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+260 549 Td
+(Production) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+335 549 Td
+(443 \(nginx\)) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+470 549 Td
+(2 / 5) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.28 rg
+525 549 Td
+(46 Medium) Tj
+ET
+BT
+/F2 11 Tf
+0.1 0.18 0.32 rg
+44 528 Td
+(2.2 Application Architecture & Endpoint Flow) Tj
+ET
+q
+0.75 w
+0.05 0.08 0.14 rg
+0.15 0.22 0.35 RG
+44 326 524 188 re
+B
+Q
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 500 Td
+(+-----------------------------------------------------------------------------------------+) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 489 Td
+(| [OBSERVED] Public Internet / Client Entrypoint \(Northstar Labs External Surface\)         |) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 478 Td
+(+-----------------------------------------------------------------------------------------+) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 467 Td
+(      | \(443 / TLS 1.3\)          | \(443 / TLS 1.3\)        | \(80, 443 / TLS 1.2\)   | \(3000 / HTTP\)) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 456 Td
+(      v                          v                        v                       v) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 445 Td
+(+--------------------+    +--------------------+    +-------------------+   +--------------------+) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 434 Td
+(| app.northstar.local|    | admin.northstar... |    | staging.northstar |   | dev.northstar.local|) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 423 Td
+(| [Production App]   |    | [Admin Dashboard]  |    | [Pre-Prod Testing]|   | [Vite Dev Server]  |) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 412 Td
+(| Next.js + nginx    |    | React + nginx \(302\)|    | Missing CSP Header|   | Exposing /__debug  |) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 401 Td
+(+--------------------+    +--------------------+    +-------------------+   +--------------------+) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 390 Td
+(      | \(API calls\)              | \(Auth redirect\)        | \(Branch drift\)        | \(UNAUTHENTICATED\)) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 379 Td
+(      v                          v                        v                       v) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 368 Td
+(+--------------------+    +--------------------+    +-------------------+   +--------------------+) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 357 Td
+(| api.northstar.local|    | [INFERRED] Internal|    | [INFERRED] Staging|   | DIRECT ACCESS TO   |) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 346 Td
+(| Express API Tier   |    | IdP / SSO Provider |    | Database Instance |   | RUNTIME METADATA   |) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 335 Td
+(+--------------------+    +--------------------+    +-------------------+   +--------------------+) Tj
+ET
+BT
+/F2 11 Tf
+0.1 0.18 0.32 rg
+44 310 Td
+(2.3 Methodology & Operational Limitations) Tj
+ET
+BT
+/F1 8 Tf
+0.3 0.35 0.42 rg
+44 296 Td
+(• Reconnaissance & Service Probing: Non-invasive port scans and HTTP response header enumeration.) Tj
+ET
+BT
+/F1 8 Tf
+0.3 0.35 0.42 rg
+44 284 Td
+(• Human Validation Principle: Detections are verified via curl telemetry before inclusion in reporting.) Tj
+ET
+BT
+/F1 8 Tf
+0.3 0.35 0.42 rg
+44 272 Td
+(• Scope Constraint: Third-party dependencies and denial-of-service tests were strictly excluded from testing.) Tj
+ET
+BT
+/F2 7.5 Tf
+0.35 0.42 0.52 rg
+44 754 Td
+(Khashana Attack Surface Intelligence | Security Assessment Report) Tj
+ET
+BT
+/F1 7.5 Tf
+0.35 0.42 0.52 rg
+398 754 Td
+(Target: Northstar Labs \(*.northstar.local\)) Tj
+ET
+q
+0.75 w
+0.85 0.88 0.92 RG
+44 746 m
+568 746 l
+S
+Q
+q
+0.75 w
+0.85 0.88 0.92 RG
+44 46 m
+568 46 l
+S
+Q
+BT
+/F3 7.5 Tf
+0.45 0.5 0.6 rg
+44 34 Td
+(CONFIDENTIAL // Prepared by Sayed Khashana — Web & API Security Researcher) Tj
+ET
+BT
+/F2 7.5 Tf
+0.25 0.3 0.4 rg
+513 34 Td
+(Page 3 of 9) Tj
+ET
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R /F5 7 0 R >> >> /Contents 15 0 R >>
+endobj
+15 0 obj
+<< /Length 5732 >>
+stream
+BT
+/F2 16 Tf
+0.08 0.15 0.3 rg
+44 720 Td
+(3. Testing Coverage & Findings Manifest) Tj
+ET
+BT
+/F2 11 Tf
+0.1 0.18 0.32 rg
+44 700 Td
+(3.1 Coverage Matrix Across Assessment Domains) Tj
+ET
+q
+0.75 w
+0.09 0.15 0.26 rg
+44 670 524 16 re
+f
+Q
+BT
+/F2 7.5 Tf
+1 1 1 rg
+50 674 Td
+(Domain / Capability) Tj
+ET
+BT
+/F2 7.5 Tf
+1 1 1 rg
+190 674 Td
+(Observed Scope) Tj
+ET
+BT
+/F2 7.5 Tf
+1 1 1 rg
+330 674 Td
+(Coverage Status) Tj
+ET
+BT
+/F2 7.5 Tf
+1 1 1 rg
+440 674 Td
+(Evidence Standard) Tj
+ET
+q
+0.5 w
+0.97 0.98 0.99 rg
+0.88 0.9 0.94 RG
+44 654 524 16 re
+B
+Q
+BT
+/F1 7 Tf
+0.2 0.25 0.32 rg
+50 658.5 Td
+(Network & Service Enumeration) Tj
+ET
+BT
+/F1 7 Tf
+0.2 0.25 0.32 rg
+190 658.5 Td
+(Ports 80, 443, 3000 across 6 hosts) Tj
+ET
+BT
+/F2 7 Tf
+0.06 0.5 0.35 rg
+330 658.5 Td
+(TESTED & EVIDENCED) Tj
+ET
+BT
+/F1 7 Tf
+0.2 0.25 0.32 rg
+440 658.5 Td
+(Raw TCP connect & HTTP response banners) Tj
+ET
+q
+0.5 w
+1 1 1 rg
+0.88 0.9 0.94 RG
+44 638 524 16 re
+B
+Q
+BT
+/F1 7 Tf
+0.2 0.25 0.32 rg
+50 642.5 Td
+(Transport Layer Security \(TLS\)) Tj
+ET
+BT
+/F1 7 Tf
+0.2 0.25 0.32 rg
+190 642.5 Td
+(TLS 1.0, 1.1, 1.2, 1.3 negotiation) Tj
+ET
+BT
+/F2 7 Tf
+0.06 0.5 0.35 rg
+330 642.5 Td
+(TESTED & EVIDENCED) Tj
+ET
+BT
+/F1 7 Tf
+0.2 0.25 0.32 rg
+440 642.5 Td
+(OpenSSL cipher handshake verification) Tj
+ET
+q
+0.5 w
+0.97 0.98 0.99 rg
+0.88 0.9 0.94 RG
+44 622 524 16 re
+B
+Q
+BT
+/F1 7 Tf
+0.2 0.25 0.32 rg
+50 626.5 Td
+(HTTP Security Headers) Tj
+ET
+BT
+/F1 7 Tf
+0.2 0.25 0.32 rg
+190 626.5 Td
+(CSP, HSTS, X-Frame-Options, CORS) Tj
+ET
+BT
+/F2 7 Tf
+0.06 0.5 0.35 rg
+330 626.5 Td
+(TESTED & EVIDENCED) Tj
+ET
+BT
+/F1 7 Tf
+0.2 0.25 0.32 rg
+440 626.5 Td
+(Captured HTTP response header dumps) Tj
+ET
+q
+0.5 w
+1 1 1 rg
+0.88 0.9 0.94 RG
+44 606 524 16 re
+B
+Q
+BT
+/F1 7 Tf
+0.2 0.25 0.32 rg
+50 610.5 Td
+(Development Route Exposure) Tj
+ET
+BT
+/F1 7 Tf
+0.2 0.25 0.32 rg
+190 610.5 Td
+(dev.northstar.local:3000/__debug) Tj
+ET
+BT
+/F2 7 Tf
+0.06 0.5 0.35 rg
+330 610.5 Td
+(TESTED & EVIDENCED) Tj
+ET
+BT
+/F1 7 Tf
+0.2 0.25 0.32 rg
+440 610.5 Td
+(HTTP 200 response with debug payload) Tj
+ET
+q
+0.5 w
+0.97 0.98 0.99 rg
+0.88 0.9 0.94 RG
+44 590 524 16 re
+B
+Q
+BT
+/F1 7 Tf
+0.2 0.25 0.32 rg
+50 594.5 Td
+(Admin Authentication Robustness) Tj
+ET
+BT
+/F1 7 Tf
+0.2 0.25 0.32 rg
+190 594.5 Td
+(admin.northstar.local/login) Tj
+ET
+BT
+/F2 7 Tf
+0.75 0.45 0.05 rg
+330 594.5 Td
+(PARTIALLY TESTED) Tj
+ET
+BT
+/F1 7 Tf
+0.2 0.25 0.32 rg
+440 594.5 Td
+(Redirect behavior & TLS verified; no brute force) Tj
+ET
+q
+0.5 w
+1 1 1 rg
+0.88 0.9 0.94 RG
+44 574 524 16 re
+B
+Q
+BT
+/F1 7 Tf
+0.2 0.25 0.32 rg
+50 578.5 Td
+(Internal Database & Host OS) Tj
+ET
+BT
+/F1 7 Tf
+0.2 0.25 0.32 rg
+190 578.5 Td
+(Underlying container filesystem) Tj
+ET
+BT
+/F2 7 Tf
+0.5 0.55 0.6 rg
+330 578.5 Td
+(NOT EVIDENCED / OOS) Tj
+ET
+BT
+/F1 7 Tf
+0.2 0.25 0.32 rg
+440 578.5 Td
+(Excluded to protect lab stability) Tj
+ET
+BT
+/F2 11 Tf
+0.1 0.18 0.32 rg
+44 550 Td
+(4.1 Findings Manifest) Tj
+ET
+q
+0.75 w
+0.09 0.15 0.26 rg
+44 518 524 18 re
+f
+Q
+BT
+/F2 8 Tf
+1 1 1 rg
+50 523 Td
+(Finding ID) Tj
+ET
+BT
+/F2 8 Tf
+1 1 1 rg
+125 523 Td
+(Severity) Tj
+ET
+BT
+/F2 8 Tf
+1 1 1 rg
+180 523 Td
+(Title) Tj
+ET
+BT
+/F2 8 Tf
+1 1 1 rg
+355 523 Td
+(OWASP / CWE) Tj
+ET
+BT
+/F2 8 Tf
+1 1 1 rg
+460 523 Td
+(CVSS v3.1) Tj
+ET
+BT
+/F2 8 Tf
+1 1 1 rg
+515 523 Td
+(Status) Tj
+ET
+q
+0.5 w
+0.97 0.98 0.99 rg
+0.88 0.9 0.94 RG
+44 498 524 20 re
+B
+Q
+BT
+/F2 7.5 Tf
+0.15 0.2 0.3 rg
+50 504 Td
+(SK-ASM-002) Tj
+ET
+BT
+/F2 7.5 Tf
+0.8 0.15 0.15 rg
+125 504 Td
+(High) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.3 rg
+180 504 Td
+(Dev server exposed with debug metadata) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.3 rg
+355 504 Td
+(A05:2021 · CWE-200) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.3 rg
+460 504 Td
+(7.5 \(High\)) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.3 rg
+515 504 Td
+(Needs Validation) Tj
+ET
+q
+0.5 w
+1 1 1 rg
+0.88 0.9 0.94 RG
+44 478 524 20 re
+B
+Q
+BT
+/F2 7.5 Tf
+0.15 0.2 0.3 rg
+50 484 Td
+(SK-ASM-001) Tj
+ET
+BT
+/F2 7.5 Tf
+0.75 0.45 0.05 rg
+125 484 Td
+(Medium) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.3 rg
+180 484 Td
+(Missing CSP header on staging app) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.3 rg
+355 484 Td
+(A05:2021 · CWE-693) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.3 rg
+460 484 Td
+(5.4 \(Medium\)) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.3 rg
+515 484 Td
+(Validated) Tj
+ET
+q
+0.5 w
+0.97 0.98 0.99 rg
+0.88 0.9 0.94 RG
+44 458 524 20 re
+B
+Q
+BT
+/F2 7.5 Tf
+0.15 0.2 0.3 rg
+50 464 Td
+(SK-ASM-003) Tj
+ET
+BT
+/F2 7.5 Tf
+0.75 0.45 0.05 rg
+125 464 Td
+(Medium) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.3 rg
+180 464 Td
+(Legacy TLS 1.1 protocol enabled on staging) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.3 rg
+355 464 Td
+(A02:2021 · CWE-326) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.3 rg
+460 464 Td
+(5.9 \(Medium\)) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.3 rg
+515 464 Td
+(Remediated) Tj
+ET
+q
+0.5 w
+1 1 1 rg
+0.88 0.9 0.94 RG
+44 438 524 20 re
+B
+Q
+BT
+/F2 7.5 Tf
+0.15 0.2 0.3 rg
+50 444 Td
+(SK-ASM-004) Tj
+ET
+BT
+/F2 7.5 Tf
+0.15 0.55 0.35 rg
+125 444 Td
+(Low) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.3 rg
+180 444 Td
+(Administrative login surface identified) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.3 rg
+355 444 Td
+(A07:2021 · CWE-287) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.3 rg
+460 444 Td
+(0.0 \(Info\)) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.3 rg
+515 444 Td
+(Accepted Risk) Tj
+ET
+BT
+/F2 10 Tf
+0.75 0.15 0.15 rg
+44 414 Td
+(Critical Severity Findings) Tj
+ET
+q
+0.75 w
+0.99 0.97 0.97 rg
+0.92 0.8 0.8 RG
+44 372 524 28 re
+B
+Q
+BT
+/F3 8.5 Tf
+0.55 0.2 0.2 rg
+58 382 Td
+(No Critical severity findings were substantiated from the available evidence.) Tj
+ET
+BT
+/F2 7.5 Tf
+0.35 0.42 0.52 rg
+44 754 Td
+(Khashana Attack Surface Intelligence | Security Assessment Report) Tj
+ET
+BT
+/F1 7.5 Tf
+0.35 0.42 0.52 rg
+398 754 Td
+(Target: Northstar Labs \(*.northstar.local\)) Tj
+ET
+q
+0.75 w
+0.85 0.88 0.92 RG
+44 746 m
+568 746 l
+S
+Q
+q
+0.75 w
+0.85 0.88 0.92 RG
+44 46 m
+568 46 l
+S
+Q
+BT
+/F3 7.5 Tf
+0.45 0.5 0.6 rg
+44 34 Td
+(CONFIDENTIAL // Prepared by Sayed Khashana — Web & API Security Researcher) Tj
+ET
+BT
+/F2 7.5 Tf
+0.25 0.3 0.4 rg
+513 34 Td
+(Page 4 of 9) Tj
+ET
+endstream
+endobj
+16 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R /F5 7 0 R >> >> /Contents 17 0 R >>
+endobj
+17 0 obj
+<< /Length 4719 >>
+stream
+BT
+/F2 16 Tf
+0.08 0.15 0.3 rg
+44 720 Td
+(4.2 Detailed Finding: SK-ASM-002) Tj
+ET
+q
+1 w
+0.99 0.95 0.95 rg
+0.9 0.35 0.35 RG
+44 630 524 68 re
+B
+Q
+BT
+/F2 8.5 Tf
+0.8 0.15 0.15 rg
+58 682 Td
+(HIGH SEVERITY · CVSS 7.5 · NEEDS RESEARCHER VALIDATION) Tj
+ET
+BT
+/F2 13 Tf
+0.1 0.15 0.25 rg
+58 662 Td
+(Development Server Exposed with Debug Metadata) Tj
+ET
+BT
+/F1 8 Tf
+0.35 0.4 0.48 rg
+58 644 Td
+(Target: http://dev.northstar.local:3000/__debug | Asset: ast-005 | OWASP A05:2021 | CWE-200 / CWE-215) Tj
+ET
+q
+0.75 w
+0.96 0.97 0.99 rg
+0.85 0.88 0.92 RG
+44 590 524 24 re
+B
+Q
+BT
+/F4 7.5 Tf
+0.2 0.25 0.35 rg
+54 598 Td
+(CVSS:3.1 Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N | Likelihood: High | Impact: High | Confidence: Medium) Tj
+ET
+BT
+/F2 9.5 Tf
+0.14 0.45 0.91 rg
+44 576 Td
+(Technical Analysis & Attack Surface) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 562 Td
+(During automated perimeter discovery, port 3000 was identified responding to external HTTP requests on dev.northstar.local.) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 550 Td
+(The service banner revealed an active Vite / Node.js development server. Requesting the root path returned application scaffolding,) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 538 Td
+(while inspection of common development route patterns confirmed an unauthenticated /__debug endpoint.) Tj
+ET
+BT
+/F2 9.5 Tf
+0.14 0.45 0.91 rg
+44 520 Td
+(Security Researcher Hypothesis & Validation) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 506 Td
+(Hypothesis: The development server was initiated with a wild-card interface binding \(0.0.0.0:3000\) and lacks upstream firewall filtering.) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 494 Td
+(Validation: Direct HTTP GET query to http://dev.northstar.local:3000/__debug returned an HTTP 200 OK with internal routing tables,) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 482 Td
+(environment metadata tags, and component source map paths. No credential extraction was attempted to preserve lab integrity.) Tj
+ET
+BT
+/F2 9.5 Tf
+0.14 0.45 0.91 rg
+44 464 Td
+(Exploitation & Business Impact) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 450 Td
+(Technical Impact: Exposing debug endpoints allows unauthenticated adversaries to map internal service structures and dependencies.) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 438 Td
+(Business Impact: While hosted on a development tier, leaked metadata frequently includes staging API tokens and database URIs,) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 426 Td
+(enabling targeted lateral movement into pre-production customer environments.) Tj
+ET
+BT
+/F2 8.5 Tf
+0.25 0.3 0.4 rg
+44 408 Td
+(Evidence: Captured Telemetry \(Figure 1 — Debug Route Response\)) Tj
+ET
+q
+0.75 w
+0.05 0.08 0.14 rg
+0.15 0.22 0.35 RG
+44 274 524 122 re
+B
+Q
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 382 Td
+(GET /__debug HTTP/1.1) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 371 Td
+(Host: dev.northstar.local:3000) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 360 Td
+(User-Agent: Khashana-ASI-Collector/1.0 \(Authorized Security Probe\)) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 349 Td
+() Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 338 Td
+(HTTP/1.1 200 OK) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 327 Td
+(Content-Type: application/json; charset=utf-8) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 316 Td
+(X-Powered-By: Vite/Node.js Development Engine) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 305 Td
+() Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 294 Td
+({"status":"debug-mode","environment":"development","buildTarget":"v2.1.0-rc3",) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 283 Td
+( "routes":["/api/v1/auth","/api/v1/telemetry","/__debug"],"sourceMaps":true}) Tj
+ET
+q
+0.75 w
+0.95 0.98 0.95 rg
+0.2 0.65 0.35 RG
+44 210 524 48 re
+B
+Q
+BT
+/F2 8.5 Tf
+0.1 0.45 0.2 rg
+54 244 Td
+(Remediation Directives for SK-ASM-002) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.25 rg
+54 232 Td
+(• Immediate Fix: Restrict port 3000 in the border security group to 127.0.0.1 or internal VPN CIDR ranges only.) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.25 rg
+54 222 Td
+(• Long-Term Fix: Mandate dev server configurations bind to localhost by default; enforce egress/ingress CI firewall rules.) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.25 rg
+54 213 Td
+(• Verification: Re-run curl http://dev.northstar.local:3000/__debug from external vantage point and verify connection timeout.) Tj
+ET
+BT
+/F2 7.5 Tf
+0.35 0.42 0.52 rg
+44 754 Td
+(Khashana Attack Surface Intelligence | Security Assessment Report) Tj
+ET
+BT
+/F1 7.5 Tf
+0.35 0.42 0.52 rg
+398 754 Td
+(Target: Northstar Labs \(*.northstar.local\)) Tj
+ET
+q
+0.75 w
+0.85 0.88 0.92 RG
+44 746 m
+568 746 l
+S
+Q
+q
+0.75 w
+0.85 0.88 0.92 RG
+44 46 m
+568 46 l
+S
+Q
+BT
+/F3 7.5 Tf
+0.45 0.5 0.6 rg
+44 34 Td
+(CONFIDENTIAL // Prepared by Sayed Khashana — Web & API Security Researcher) Tj
+ET
+BT
+/F2 7.5 Tf
+0.25 0.3 0.4 rg
+513 34 Td
+(Page 5 of 9) Tj
+ET
+endstream
+endobj
+18 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R /F5 7 0 R >> >> /Contents 19 0 R >>
+endobj
+19 0 obj
+<< /Length 4595 >>
+stream
+BT
+/F2 16 Tf
+0.08 0.15 0.3 rg
+44 720 Td
+(4.3 Detailed Finding: SK-ASM-001) Tj
+ET
+q
+1 w
+0.99 0.96 0.9 rg
+0.92 0.65 0.2 RG
+44 630 524 68 re
+B
+Q
+BT
+/F2 8.5 Tf
+0.75 0.45 0.05 rg
+58 682 Td
+(MEDIUM SEVERITY · CVSS 5.4 · RESEARCHER VALIDATED) Tj
+ET
+BT
+/F2 13 Tf
+0.1 0.15 0.25 rg
+58 662 Td
+(Missing Content Security Policy on Staging Application) Tj
+ET
+BT
+/F1 8 Tf
+0.35 0.4 0.48 rg
+58 644 Td
+(Target: https://staging.northstar.local/ | Asset: ast-004 | OWASP A05:2021 | CWE-693 / CWE-1021) Tj
+ET
+q
+0.75 w
+0.96 0.97 0.99 rg
+0.85 0.88 0.92 RG
+44 590 524 24 re
+B
+Q
+BT
+/F4 7.5 Tf
+0.2 0.25 0.35 rg
+54 598 Td
+(CVSS:3.1 Vector: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N | Likelihood: Medium | Impact: Low-Medium | Confidence: High) Tj
+ET
+BT
+/F2 9.5 Tf
+0.14 0.45 0.91 rg
+44 576 Td
+(Technical Analysis & Attack Surface) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 562 Td
+(The staging environment hosting the customer portal \(staging.northstar.local\) was evaluated for defense-in-depth browser protections.) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 550 Td
+(HTTP responses served over HTTPS lacked a Content-Security-Policy \(CSP\) response header. While production enforces modern) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 538 Td
+(transport policies, this protection was omitted in the pre-production reverse proxy template.) Tj
+ET
+BT
+/F2 9.5 Tf
+0.14 0.45 0.91 rg
+44 520 Td
+(Security Researcher Hypothesis & Validation) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 506 Td
+(Hypothesis: The absence of CSP allows unconstrained execution of injected script resources and cross-site framing.) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 494 Td
+(Validation: Direct inspection of response headers confirms the complete absence of content-security-policy and x-frame-options.) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 482 Td
+(Because staging shares session tokens with pre-production APIs, this represents a validated security gap.) Tj
+ET
+BT
+/F2 9.5 Tf
+0.14 0.45 0.91 rg
+44 464 Td
+(Exploitation & Business Impact) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 450 Td
+(Technical Impact: If an XSS vulnerability exists on the staging portal, browser-level controls cannot prevent exfiltration of session data.) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 438 Td
+(Business Impact: Pre-production environments are frequently targeted to stage phishing attacks or test exploits against real configurations) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 426 Td
+(without triggering production Security Operations Center \(SOC\) alerts.) Tj
+ET
+BT
+/F2 8.5 Tf
+0.25 0.3 0.4 rg
+44 408 Td
+(Evidence: HTTP Response Headers \(Figure 2 — Absent Header Telemetry\)) Tj
+ET
+q
+0.75 w
+0.05 0.08 0.14 rg
+0.15 0.22 0.35 RG
+44 274 524 122 re
+B
+Q
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 382 Td
+(GET / HTTP/1.1) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 371 Td
+(Host: staging.northstar.local) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 360 Td
+() Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 349 Td
+(HTTP/1.1 200 OK) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 338 Td
+(Server: nginx) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 327 Td
+(Content-Type: text/html; charset=utf-8) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 316 Td
+(Strict-Transport-Security: max-age=31536000) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 305 Td
+(X-Content-Type-Options: nosniff) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 294 Td
+([MISSING] Content-Security-Policy header is absent from HTTP response) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 283 Td
+([MISSING] X-Frame-Options header is absent from HTTP response) Tj
+ET
+q
+0.75 w
+0.95 0.98 0.95 rg
+0.2 0.65 0.35 RG
+44 210 524 48 re
+B
+Q
+BT
+/F2 8.5 Tf
+0.1 0.45 0.2 rg
+54 244 Td
+(Remediation Directives for SK-ASM-001) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.25 rg
+54 232 Td
+(• Immediate Fix: Add "add_header Content-Security-Policy default-src 'self';" to nginx server block on staging.) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.25 rg
+54 222 Td
+(• Long-Term Fix: Incorporate security header auditing into pre-merge automated CI/CD deployment checks.) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.25 rg
+54 213 Td
+(• Verification: Execute curl -I https://staging.northstar.local and verify presence of Content-Security-Policy.) Tj
+ET
+BT
+/F2 7.5 Tf
+0.35 0.42 0.52 rg
+44 754 Td
+(Khashana Attack Surface Intelligence | Security Assessment Report) Tj
+ET
+BT
+/F1 7.5 Tf
+0.35 0.42 0.52 rg
+398 754 Td
+(Target: Northstar Labs \(*.northstar.local\)) Tj
+ET
+q
+0.75 w
+0.85 0.88 0.92 RG
+44 746 m
+568 746 l
+S
+Q
+q
+0.75 w
+0.85 0.88 0.92 RG
+44 46 m
+568 46 l
+S
+Q
+BT
+/F3 7.5 Tf
+0.45 0.5 0.6 rg
+44 34 Td
+(CONFIDENTIAL // Prepared by Sayed Khashana — Web & API Security Researcher) Tj
+ET
+BT
+/F2 7.5 Tf
+0.25 0.3 0.4 rg
+513 34 Td
+(Page 6 of 9) Tj
+ET
+endstream
+endobj
+20 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R /F5 7 0 R >> >> /Contents 21 0 R >>
+endobj
+21 0 obj
+<< /Length 4486 >>
+stream
+BT
+/F2 16 Tf
+0.08 0.15 0.3 rg
+44 720 Td
+(4.4 Retest & Remediation Verification: SK-ASM-003) Tj
+ET
+q
+1 w
+0.93 0.96 0.99 rg
+0.35 0.6 0.9 RG
+44 630 524 68 re
+B
+Q
+BT
+/F2 8.5 Tf
+0.1 0.4 0.8 rg
+58 682 Td
+(MEDIUM SEVERITY · VERIFIED REMEDIATED & RETESTED) Tj
+ET
+BT
+/F2 13 Tf
+0.1 0.15 0.25 rg
+58 662 Td
+(TLS Configuration Allows Legacy Protocol on Staging) Tj
+ET
+BT
+/F1 8 Tf
+0.35 0.4 0.48 rg
+58 644 Td
+(Target: https://staging.northstar.local/ | Asset: ast-004 | OWASP A02:2021 | CWE-326 | Initial Finding: 01 Sep 2026) Tj
+ET
+BT
+/F2 11 Tf
+0.1 0.18 0.32 rg
+44 614 Td
+(Retest Summary & Cryptographic Validation) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 600 Td
+(During the 01 Sep baseline discovery, staging.northstar.local accepted TLS 1.1 handshakes with deprecated cipher suites.) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 588 Td
+(Legacy transport protocols are susceptible to cryptographic downgrade attacks \(e.g., POODLE, BEAST variants\) and violate SOC 2) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 576 Td
+(and PCI-DSS compliance standards. Following notification, Northstar Labs engineering updated the cipher suite configuration.) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 564 Td
+(A formal retest probe was executed on 08 Sep 2026 to verify closure of the finding.) Tj
+ET
+BT
+/F2 9.5 Tf
+0.14 0.45 0.91 rg
+44 542 Td
+(Retest Comparison: Baseline vs. Post-Remediation Verification) Tj
+ET
+q
+0.75 w
+0.99 0.95 0.95 rg
+0.9 0.5 0.5 RG
+44 428 254 100 re
+B
+Q
+BT
+/F2 8 Tf
+0.75 0.15 0.15 rg
+54 514 Td
+(BASELINE \(01 SEP 2026\) — VULNERABLE) Tj
+ET
+BT
+/F4 7 Tf
+0.35 0.15 0.15 rg
+54 500 Td
+(Client Probe: openssl s_client -tls1_1) Tj
+ET
+BT
+/F4 7 Tf
+0.35 0.15 0.15 rg
+54 489 Td
+(Target: staging.northstar.local:443) Tj
+ET
+BT
+/F4 7 Tf
+0.35 0.15 0.15 rg
+54 478 Td
+(Handshake: CONNECTED\(00000003\)) Tj
+ET
+BT
+/F4 7 Tf
+0.35 0.15 0.15 rg
+54 467 Td
+(Protocol: TLSv1.1 \(Negotiated\)) Tj
+ET
+BT
+/F4 7 Tf
+0.35 0.15 0.15 rg
+54 456 Td
+(Cipher: ECDHE-RSA-AES256-SHA) Tj
+ET
+BT
+/F4 7 Tf
+0.35 0.15 0.15 rg
+54 445 Td
+(Status: FAIL — Deprecated Protocol Supported) Tj
+ET
+q
+0.75 w
+0.93 0.98 0.94 rg
+0.25 0.7 0.4 RG
+314 428 254 100 re
+B
+Q
+BT
+/F2 8 Tf
+0.08 0.5 0.3 rg
+324 514 Td
+(RETEST \(08 SEP 2026\) — VERIFIED REMEDIATED) Tj
+ET
+BT
+/F4 7 Tf
+0.08 0.4 0.2 rg
+324 500 Td
+(Client Probe: openssl s_client -tls1_1) Tj
+ET
+BT
+/F4 7 Tf
+0.08 0.4 0.2 rg
+324 489 Td
+(Target: staging.northstar.local:443) Tj
+ET
+BT
+/F4 7 Tf
+0.08 0.4 0.2 rg
+324 478 Td
+(Handshake: FAILURE \(Reset by peer\)) Tj
+ET
+BT
+/F4 7 Tf
+0.08 0.4 0.2 rg
+324 467 Td
+(Alert: alert protocol version \(0x0246\)) Tj
+ET
+BT
+/F4 7 Tf
+0.08 0.4 0.2 rg
+324 456 Td
+(Modern Probe: TLSv1.2 & TLSv1.3 PASS) Tj
+ET
+BT
+/F4 7 Tf
+0.08 0.4 0.2 rg
+324 445 Td
+(Status: VERIFIED CLOSED — Strict Protocol Enforced) Tj
+ET
+BT
+/F2 8.5 Tf
+0.25 0.3 0.4 rg
+44 410 Td
+(Retest Telemetry Logs \(Figure 3 — Cryptographic Rejection Proof\)) Tj
+ET
+q
+0.75 w
+0.05 0.08 0.14 rg
+0.15 0.22 0.35 RG
+44 298 524 100 re
+B
+Q
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 384 Td
+($ openssl s_client -connect staging.northstar.local:443 -tls1_1) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 373 Td
+(CONNECTED\(00000003\)) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 362 Td
+(140294827181888:error:1409442E:SSL routines:ssl3_read_bytes:tlsv1 alert protocol version:../ssl/record/rec_layer_s3.c:1544:SSL alert number 70) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 351 Td
+(---) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 340 Td
+(no peer certificate available) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 329 Td
+(---) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 318 Td
+(SSL handshake has read 7 bytes and written 119 bytes) Tj
+ET
+BT
+/F4 7.5 Tf
+0.85 0.9 0.96 rg
+54 307 Td
+(Verification: [OK] Protocol TLSv1.1 rejected by host.) Tj
+ET
+q
+0.75 w
+0.95 0.98 0.95 rg
+0.2 0.65 0.35 RG
+44 242 524 40 re
+B
+Q
+BT
+/F2 8.5 Tf
+0.1 0.45 0.2 rg
+54 268 Td
+(Researcher Attestation of Remediation) Tj
+ET
+BT
+/F1 7.5 Tf
+0.15 0.2 0.25 rg
+54 254 Td
+(Finding SK-ASM-003 is formally closed. Transport security across staging infrastructure conforms to modern cryptographic standards.) Tj
+ET
+BT
+/F2 7.5 Tf
+0.35 0.42 0.52 rg
+44 754 Td
+(Khashana Attack Surface Intelligence | Security Assessment Report) Tj
+ET
+BT
+/F1 7.5 Tf
+0.35 0.42 0.52 rg
+398 754 Td
+(Target: Northstar Labs \(*.northstar.local\)) Tj
+ET
+q
+0.75 w
+0.85 0.88 0.92 RG
+44 746 m
+568 746 l
+S
+Q
+q
+0.75 w
+0.85 0.88 0.92 RG
+44 46 m
+568 46 l
+S
+Q
+BT
+/F3 7.5 Tf
+0.45 0.5 0.6 rg
+44 34 Td
+(CONFIDENTIAL // Prepared by Sayed Khashana — Web & API Security Researcher) Tj
+ET
+BT
+/F2 7.5 Tf
+0.25 0.3 0.4 rg
+513 34 Td
+(Page 7 of 9) Tj
+ET
+endstream
+endobj
+22 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R /F5 7 0 R >> >> /Contents 23 0 R >>
+endobj
+23 0 obj
+<< /Length 4575 >>
+stream
+BT
+/F2 16 Tf
+0.08 0.15 0.3 rg
+44 720 Td
+(4.5 Finding: SK-ASM-004 & 5. Remediation Strategy) Tj
+ET
+q
+0.75 w
+0.96 0.98 0.99 rg
+0.4 0.65 0.9 RG
+44 644 524 56 re
+B
+Q
+BT
+/F2 8 Tf
+0.15 0.4 0.75 rg
+56 686 Td
+(LOW SEVERITY / EXPOSURE · ACCEPTED OPERATIONAL RISK) Tj
+ET
+BT
+/F2 10 Tf
+0.1 0.15 0.25 rg
+56 670 Td
+(SK-ASM-004: Administrative Login Surface Identified \(admin.northstar.local/login\)) Tj
+ET
+BT
+/F1 7.5 Tf
+0.35 0.4 0.48 rg
+56 658 Td
+(Risk Accepted: Privileged administrative login is an intentional business capability. Observed safeguards \(TLS 1.3, IT Ops ownership,) Tj
+ET
+BT
+/F1 7.5 Tf
+0.35 0.4 0.48 rg
+56 648 Td
+(302 redirect\) are functioning as intended. Recommended: continue enforcing MFA, rate-limiting, and VPN access restrictions.) Tj
+ET
+BT
+/F2 11 Tf
+0.1 0.18 0.32 rg
+44 626 Td
+(5.1 Per-Finding Remediation Matrix) Tj
+ET
+q
+0.75 w
+0.09 0.15 0.26 rg
+44 596 524 16 re
+f
+Q
+BT
+/F2 7.5 Tf
+1 1 1 rg
+50 600 Td
+(Finding) Tj
+ET
+BT
+/F2 7.5 Tf
+1 1 1 rg
+120 600 Td
+(Immediate Triage Fix) Tj
+ET
+BT
+/F2 7.5 Tf
+1 1 1 rg
+270 600 Td
+(Strategic Architectural Fix) Tj
+ET
+BT
+/F2 7.5 Tf
+1 1 1 rg
+424 600 Td
+(Verification Standard) Tj
+ET
+q
+0.5 w
+0.97 0.98 0.99 rg
+0.88 0.9 0.94 RG
+44 574 524 22 re
+B
+Q
+BT
+/F2 7 Tf
+0.15 0.2 0.28 rg
+50 582 Td
+(SK-ASM-002) Tj
+ET
+BT
+/F1 7 Tf
+0.15 0.2 0.28 rg
+120 582 Td
+(Ingress firewall blocks port 3000) Tj
+ET
+BT
+/F1 7 Tf
+0.15 0.2 0.28 rg
+270 582 Td
+(Container bind restricted to 127.0.0.1) Tj
+ET
+BT
+/F1 7 Tf
+0.15 0.2 0.28 rg
+424 582 Td
+(External curl connection timeout) Tj
+ET
+q
+0.5 w
+1 1 1 rg
+0.88 0.9 0.94 RG
+44 552 524 22 re
+B
+Q
+BT
+/F2 7 Tf
+0.15 0.2 0.28 rg
+50 560 Td
+(SK-ASM-001) Tj
+ET
+BT
+/F1 7 Tf
+0.15 0.2 0.28 rg
+120 560 Td
+(Inject CSP in staging nginx block) Tj
+ET
+BT
+/F1 7 Tf
+0.15 0.2 0.28 rg
+270 560 Td
+(CI/CD security header compliance test) Tj
+ET
+BT
+/F1 7 Tf
+0.15 0.2 0.28 rg
+424 560 Td
+(HTTP response header verification) Tj
+ET
+q
+0.5 w
+0.97 0.98 0.99 rg
+0.88 0.9 0.94 RG
+44 530 524 22 re
+B
+Q
+BT
+/F2 7 Tf
+0.15 0.2 0.28 rg
+50 538 Td
+(SK-ASM-003) Tj
+ET
+BT
+/F1 7 Tf
+0.15 0.2 0.28 rg
+120 538 Td
+(Enforce ssl_protocols TLS 1.2+) Tj
+ET
+BT
+/F1 7 Tf
+0.15 0.2 0.28 rg
+270 538 Td
+(Infrastructure-as-Code TLS template) Tj
+ET
+BT
+/F1 7 Tf
+0.15 0.2 0.28 rg
+424 538 Td
+(OpenSSL rejection of legacy ciphers) Tj
+ET
+q
+0.5 w
+1 1 1 rg
+0.88 0.9 0.94 RG
+44 508 524 22 re
+B
+Q
+BT
+/F2 7 Tf
+0.15 0.2 0.28 rg
+50 516 Td
+(SK-ASM-004) Tj
+ET
+BT
+/F1 7 Tf
+0.15 0.2 0.28 rg
+120 516 Td
+(Verify MFA enforcement) Tj
+ET
+BT
+/F1 7 Tf
+0.15 0.2 0.28 rg
+270 516 Td
+(Network-level zero-trust VPN gateway) Tj
+ET
+BT
+/F1 7 Tf
+0.15 0.2 0.28 rg
+424 516 Td
+(Audit log of privileged auth attempts) Tj
+ET
+BT
+/F2 11 Tf
+0.1 0.18 0.32 rg
+44 484 Td
+(5.2 Strategic Remediation Roadmap) Tj
+ET
+q
+0.75 w
+0.99 0.93 0.93 rg
+0.85 0.88 0.92 RG
+44 424 524 46 re
+B
+Q
+BT
+/F2 8 Tf
+0.8 0.15 0.15 rg
+56 456 Td
+(PHASE 1: IMMEDIATE TRIAGE \(0–30 DAYS\)) Tj
+ET
+BT
+/F1 7.5 Tf
+0.2 0.25 0.32 rg
+56 444 Td
+(• Isolate dev.northstar.local port 3000 to eliminate unauthenticated diagnostic telemetry leakage.) Tj
+ET
+BT
+/F1 7.5 Tf
+0.2 0.25 0.32 rg
+56 433 Td
+(• Audit all external-facing cloud security groups for unapproved non-standard ports \(e.g., 3000, 8080, 8888\).) Tj
+ET
+q
+0.75 w
+0.99 0.96 0.9 rg
+0.85 0.88 0.92 RG
+44 370 524 46 re
+B
+Q
+BT
+/F2 8 Tf
+0.75 0.45 0.05 rg
+56 402 Td
+(PHASE 2: HARDENING & STANDARDIZATION \(30–90 DAYS\)) Tj
+ET
+BT
+/F1 7.5 Tf
+0.2 0.25 0.32 rg
+56 390 Td
+(• Implement unified Content Security Policies across staging and production reverse proxies.) Tj
+ET
+BT
+/F1 7.5 Tf
+0.2 0.25 0.32 rg
+56 379 Td
+(• Integrate security linter checks into continuous integration pipelines to prevent configuration drift.) Tj
+ET
+q
+0.75 w
+0.92 0.95 0.99 rg
+0.85 0.88 0.92 RG
+44 316 524 46 re
+B
+Q
+BT
+/F2 8 Tf
+0.14 0.45 0.91 rg
+56 348 Td
+(PHASE 3: CONTINUOUS ASSURANCE \(90+ DAYS\)) Tj
+ET
+BT
+/F1 7.5 Tf
+0.2 0.25 0.32 rg
+56 336 Td
+(• Establish automated quarterly attack surface diffing to catch shadow infrastructure prior to audit windows.) Tj
+ET
+BT
+/F1 7.5 Tf
+0.2 0.25 0.32 rg
+56 325 Td
+(• Commission comprehensive authenticated web application penetration testing on core customer-facing APIs.) Tj
+ET
+BT
+/F2 7.5 Tf
+0.35 0.42 0.52 rg
+44 754 Td
+(Khashana Attack Surface Intelligence | Security Assessment Report) Tj
+ET
+BT
+/F1 7.5 Tf
+0.35 0.42 0.52 rg
+398 754 Td
+(Target: Northstar Labs \(*.northstar.local\)) Tj
+ET
+q
+0.75 w
+0.85 0.88 0.92 RG
+44 746 m
+568 746 l
+S
+Q
+q
+0.75 w
+0.85 0.88 0.92 RG
+44 46 m
+568 46 l
+S
+Q
+BT
+/F3 7.5 Tf
+0.45 0.5 0.6 rg
+44 34 Td
+(CONFIDENTIAL // Prepared by Sayed Khashana — Web & API Security Researcher) Tj
+ET
+BT
+/F2 7.5 Tf
+0.25 0.3 0.4 rg
+513 34 Td
+(Page 8 of 9) Tj
+ET
+endstream
+endobj
+24 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R /F3 5 0 R /F4 6 0 R /F5 7 0 R >> >> /Contents 25 0 R >>
+endobj
+25 0 obj
+<< /Length 3975 >>
+stream
+BT
+/F2 16 Tf
+0.08 0.15 0.3 rg
+44 720 Td
+(6. Appendix & Assessment Attestation) Tj
+ET
+BT
+/F2 9.5 Tf
+0.14 0.45 0.91 rg
+44 698 Td
+(6.1 Methodology References & Framework Standards) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 684 Td
+(• OWASP Top 10 Web Application Security Risks \(2021 Edition\) — Categories A02, A05, A07.) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 672 Td
+(• NIST Special Publication 800-115 — Technical Guide to Information Security Testing and Assessment.) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 660 Td
+(• CVSS v3.1 Specification — First.org Common Vulnerability Scoring System v3.1 User Guide.) Tj
+ET
+BT
+/F2 9.5 Tf
+0.14 0.45 0.91 rg
+44 640 Td
+(6.2 Tool Inventory & Telemetry Harnesses) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 626 Td
+(• Khashana ASI Core Engine: Deterministic asset normalization, change detection, and contextual risk scoring.) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 614 Td
+(• OpenSSL Cryptographic Suite \(v3.0.x\): Handshake negotiation probes for SSLv3 through TLS 1.3 protocol validation.) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 602 Td
+(• HTTP Telemetry Harness: Automated non-destructive header inspection and HTTP status code correlation.) Tj
+ET
+BT
+/F2 9.5 Tf
+0.14 0.45 0.91 rg
+44 582 Td
+(6.3 Glossary of Technical Security Terminology) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 568 Td
+(• Attack Surface Intelligence \(ASI\): Continuous discovery, attribution, and risk weighting of public-facing IT assets.) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 556 Td
+(• Content Security Policy \(CSP\): HTTP header allowing site operators to restrict resources the browser may execute.) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 544 Td
+(• BOLA / IDOR: Broken Object Level Authorization, wherein an API fails to validate user permission to access resources.) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 532 Td
+(• Perimeter Drift: The accumulation of unmonitored changes and shadow IT assets between formal security baselines.) Tj
+ET
+BT
+/F2 9.5 Tf
+0.14 0.45 0.91 rg
+44 512 Td
+(6.4 Evidence Index) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 498 Td
+(• Evidence Ref 1: GET dev.northstar.local:3000/__debug JSON metadata response \(Captured 08 Sep 2026\).) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 486 Td
+(• Evidence Ref 2: GET staging.northstar.local HTTP response headers missing CSP directive \(Captured 08 Sep 2026\).) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.32 rg
+44 474 Td
+(• Evidence Ref 3: OpenSSL s_client handshake rejection log verifying TLS 1.1 remediation \(Captured 08 Sep 2026\).) Tj
+ET
+q
+1 w
+0.97 0.98 1 rg
+0.35 0.55 0.9 RG
+44 334 524 110 re
+B
+Q
+BT
+/F2 9 Tf
+0.1 0.35 0.8 rg
+60 426 Td
+(FORMAL DELIVERABLE ATTESTATION & RESEARCHER SIGN-OFF) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.35 rg
+60 410 Td
+(This executive assessment report represents a defensible, human-validated assessment of the external security posture) Tj
+ET
+BT
+/F1 8 Tf
+0.2 0.25 0.35 rg
+60 398 Td
+(of Northstar Labs. All documented findings carry verified technical evidence and realistic business impact context.) Tj
+ET
+BT
+/F2 8.5 Tf
+0.15 0.2 0.3 rg
+60 372 Td
+(Lead Security Researcher:) Tj
+ET
+BT
+/F2 12 Tf
+0.08 0.15 0.3 rg
+60 356 Td
+(Sayed Khashana) Tj
+ET
+BT
+/F3 8 Tf
+0.4 0.45 0.55 rg
+60 344 Td
+(Web & API Security Researcher // Khashana ASI) Tj
+ET
+BT
+/F2 8.5 Tf
+0.15 0.2 0.3 rg
+368 372 Td
+(Assessment Date: 08 September 2026) Tj
+ET
+BT
+/F2 8.5 Tf
+0.75 0.15 0.15 rg
+368 356 Td
+(Classification: CONFIDENTIAL) Tj
+ET
+BT
+/F1 8 Tf
+0.4 0.45 0.55 rg
+368 344 Td
+(Delivery Channel: Direct Client Deliverable) Tj
+ET
+BT
+/F2 7.5 Tf
+0.35 0.42 0.52 rg
+44 754 Td
+(Khashana Attack Surface Intelligence | Security Assessment Report) Tj
+ET
+BT
+/F1 7.5 Tf
+0.35 0.42 0.52 rg
+398 754 Td
+(Target: Northstar Labs \(*.northstar.local\)) Tj
+ET
+q
+0.75 w
+0.85 0.88 0.92 RG
+44 746 m
+568 746 l
+S
+Q
+q
+0.75 w
+0.85 0.88 0.92 RG
+44 46 m
+568 46 l
+S
+Q
+BT
+/F3 7.5 Tf
+0.45 0.5 0.6 rg
+44 34 Td
+(CONFIDENTIAL // Prepared by Sayed Khashana — Web & API Security Researcher) Tj
+ET
+BT
+/F2 7.5 Tf
+0.25 0.3 0.4 rg
+513 34 Td
+(Page 9 of 9) Tj
+ET
+endstream
+endobj
+xref
+0 26
+0000000000 65535 f 
+0000000019 00000 n 
+0000000068 00000 n 
+0000000181 00000 n 
+0000000251 00000 n 
+0000000326 00000 n 
+0000000404 00000 n 
+0000000472 00000 n 
+0000000545 00000 n 
+0000000711 00000 n 
+0000004974 00000 n 
+0000005142 00000 n 
+0000010282 00000 n 
+0000010450 00000 n 
+0000017347 00000 n 
+0000017515 00000 n 
+0000023299 00000 n 
+0000023467 00000 n 
+0000028238 00000 n 
+0000028406 00000 n 
+0000033053 00000 n 
+0000033221 00000 n 
+0000037759 00000 n 
+0000037927 00000 n 
+0000042554 00000 n 
+0000042722 00000 n 
+trailer
+<< /Size 26 /Root 1 0 R >>
+startxref
+46749
+%%EOF

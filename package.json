@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "test": "node --test",
-    "lint": "node --check server.js && node --check api/index.js && node --check public/app.js"
+    "lint": "node --check server.js && node --check api/index.js && node --check public/app.js && node --check lib/report-pdf.js"
   },
   "engines": { "node": ">=20" }
 }

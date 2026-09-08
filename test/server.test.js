@@ -11,3 +11,36 @@ test('local fixture target is accepted without scanning',async()=>{const r=await
 test('review state validates input',async()=>{const bad=await fetch(`http://127.0.0.1:${port}/api/findings/SK-ASM-001/review`,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({status:'Definitely Bad'})});assert.equal(bad.status,400);const good=await fetch(`http://127.0.0.1:${port}/api/findings/SK-ASM-001/review`,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({status:'Validated',notes:'Synthetic review'})});assert.equal(good.status,200);});
 test('api serverless entrypoint exports callable function',()=>{const apiHandler=require('../api/index');assert.equal(typeof apiHandler,'function');});
 test('root / serves dashboard html',async()=>{const r=await fetch(`http://127.0.0.1:${port}/`);assert.equal(r.status,200);const body=await r.text();assert.match(body,/Khashana/);});
+test('generateExecutiveReport produces multi-page executive PDF deliverable',()=>{
+  const { generateExecutiveReport } = require('../lib/report-pdf');
+  const pdf = generateExecutiveReport();
+  assert.ok(Buffer.isBuffer(pdf), 'Report must be a Buffer');
+  assert.ok(pdf.length > 30000, `Report should be comprehensive (>30KB), got ${pdf.length}`);
+  const raw = pdf.toString('latin1');
+  assert.ok(raw.startsWith('%PDF-1.4'), 'Report must start with %PDF-1.4');
+  assert.ok(raw.includes('%%EOF'), 'Report must end with %%EOF');
+  assert.ok(raw.includes('/Count 9'), 'Report must contain exactly 9 catalogued pages');
+  assert.ok(raw.includes('Sayed Khashana'), 'Report must feature researcher name');
+  assert.ok(raw.includes('Northstar Labs'), 'Report must feature client organization');
+  assert.ok(raw.includes('SK-ASM-001'), 'Report must detail SK-ASM-001');
+  assert.ok(raw.includes('SK-ASM-002'), 'Report must detail SK-ASM-002');
+  assert.ok(raw.includes('SK-ASM-003'), 'Report must detail SK-ASM-003');
+  assert.ok(raw.includes('SK-ASM-004'), 'Report must detail SK-ASM-004');
+  assert.ok(!raw.includes('Executive summary: 6 assets observed; 3 open findings;'), 'Report must not contain old single-line placeholder');
+});
+test('GET /api/reports/executive.pdf delivers executive PDF with correct headers',async()=>{
+  const r = await fetch(`http://127.0.0.1:${port}/api/reports/executive.pdf`);
+  assert.equal(r.status, 200);
+  assert.equal(r.headers.get('content-type'), 'application/pdf');
+  assert.match(r.headers.get('content-disposition') || '', /inline; filename="northstar-executive-report\.pdf"/);
+  const buf = Buffer.from(await r.arrayBuffer());
+  assert.ok(buf.length > 30000);
+  assert.equal(buf.subarray(0, 8).toString(), '%PDF-1.4');
+});
+test('HEAD /api/reports/executive.pdf delivers headers without body',async()=>{
+  const r = await fetch(`http://127.0.0.1:${port}/api/reports/executive.pdf`, { method: 'HEAD' });
+  assert.equal(r.status, 200);
+  assert.equal(r.headers.get('content-type'), 'application/pdf');
+  const text = await r.text();
+  assert.equal(text.length, 0);
+});
