@@ -62,25 +62,26 @@ const requestHandler = async (req,res) => {
       const p = url.searchParams.get('__path');
       effectivePath = p.startsWith('/') ? p : '/api/' + p;
     }
-    if (req.method === 'GET' && (effectivePath === '/' || url.pathname === '/')) {
+    if ((req.method === 'GET' || req.method === 'HEAD') && (effectivePath === '/' || url.pathname === '/')) {
       const file = safeFile('/');
       if (file && fs.existsSync(file)) {
         res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+        if (req.method === 'HEAD') return res.end();
         return fs.createReadStream(file).pipe(res);
       }
       res.writeHead(302, { 'Location': '/index.html' });
       return res.end();
     }
     const route = effectivePath.startsWith('/api') ? effectivePath : '/api' + (effectivePath.startsWith('/') ? effectivePath : '/' + effectivePath);
-    if (req.method==='GET' && (route==='/api' || route==='/api/health')) return json(res,200,{status:'ok',mode:'synthetic-local-demo',time:now});
-    if (req.method==='GET' && route==='/api/dashboard') return json(res,200,dashboard());
-    if (req.method==='GET' && route==='/api/assets') return json(res,200,assets.map(publicAsset));
-    if (req.method==='GET' && route==='/api/findings') return json(res,200,findings);
-    if (req.method==='POST' && route==='/api/scans') { const data=await body(req); if (!String(data.target||'').endsWith('.local')) return json(res,403,{error:'Local-lab-only policy: targets must end in .local. No scan was performed.'}); return json(res,202,{id:crypto.randomUUID(),status:'completed',target:data.target,message:'Synthetic local-lab fixture normalized. No network scan was executed.'}); }
-    if (req.method==='POST' && /^\/api\/findings\/[^/]+\/review$/.test(route)) { const id=route.split('/')[3], data=await body(req), finding=findings.find(f=>f.id===id); if(!finding) return json(res,404,{error:'Finding not found'}); const allowed=['Validated','False Positive','Needs Validation','Accepted Risk','Remediated','Retest Required','Closed']; if(data.status && !allowed.includes(data.status)) return json(res,400,{error:'Invalid finding state'}); finding.status=data.status||finding.status; finding.notes=String(data.notes||'').slice(0,4000); finding.validation=String(data.validation||'').slice(0,4000); reviews[id]={...data,updatedAt:new Date().toISOString()}; return json(res,200,{finding,review:reviews[id]}); }
-    if (req.method==='GET' && route==='/api/reports/executive.pdf') { const d=dashboard(); const report=pdf(`Executive summary: ${d.metrics.assets} assets observed; ${d.metrics.openFindings} open findings; highest priority: ${findings[1].id} on dev.northstar.local needs researcher validation.`); res.writeHead(200,{'Content-Type':'application/pdf','Content-Disposition':'attachment; filename="northstar-executive-report.pdf"','Content-Length':report.length}); return res.end(report); }
-    if(req.method!=='GET') return json(res,405,{error:'Method not allowed'});
-    const file=safeFile(url.pathname); if(!file || !fs.existsSync(file)) return json(res,404,{error:'Not found'}); const ext=path.extname(file); const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml'}; res.writeHead(200,{'Content-Type':types[ext]||'application/octet-stream'}); fs.createReadStream(file).pipe(res);
+    if ((req.method === 'GET' || req.method === 'HEAD') && (route === '/api' || route === '/api/health')) return json(res, 200, { status: 'ok', mode: 'synthetic-local-demo', time: now });
+    if ((req.method === 'GET' || req.method === 'HEAD') && route === '/api/dashboard') return json(res, 200, dashboard());
+    if ((req.method === 'GET' || req.method === 'HEAD') && route === '/api/assets') return json(res, 200, assets.map(publicAsset));
+    if ((req.method === 'GET' || req.method === 'HEAD') && route === '/api/findings') return json(res, 200, findings);
+    if (req.method === 'POST' && route === '/api/scans') { const data = await body(req); if (!String(data.target || '').endsWith('.local')) return json(res, 403, { error: 'Local-lab-only policy: targets must end in .local. No scan was performed.' }); return json(res, 202, { id: crypto.randomUUID(), status: 'completed', target: data.target, message: 'Synthetic local-lab fixture normalized. No network scan was executed.' }); }
+    if (req.method === 'POST' && /^\/api\/findings\/[^/]+\/review$/.test(route)) { const id = route.split('/')[3], data = await body(req), finding = findings.find(f => f.id === id); if (!finding) return json(res, 404, { error: 'Finding not found' }); const allowed = ['Validated', 'False Positive', 'Needs Validation', 'Accepted Risk', 'Remediated', 'Retest Required', 'Closed']; if (data.status && !allowed.includes(data.status)) return json(res, 400, { error: 'Invalid finding state' }); finding.status = data.status || finding.status; finding.notes = String(data.notes || '').slice(0, 4000); finding.validation = String(data.validation || '').slice(0, 4000); reviews[id] = { ...data, updatedAt: new Date().toISOString() }; return json(res, 200, { finding, review: reviews[id] }); }
+    if ((req.method === 'GET' || req.method === 'HEAD') && route === '/api/reports/executive.pdf') { const d = dashboard(); const report = pdf(`Executive summary: ${d.metrics.assets} assets observed; ${d.metrics.openFindings} open findings; highest priority: ${findings[1].id} on dev.northstar.local needs researcher validation.`); res.writeHead(200, { 'Content-Type': 'application/pdf', 'Content-Disposition': 'attachment; filename="northstar-executive-report.pdf"', 'Content-Length': report.length }); if (req.method === 'HEAD') return res.end(); return res.end(report); }
+    if (req.method !== 'GET' && req.method !== 'HEAD') return json(res, 405, { error: 'Method not allowed' });
+    const file = safeFile(url.pathname); if (!file || !fs.existsSync(file)) return json(res, 404, { error: 'Not found' }); const ext = path.extname(file); const types = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.svg': 'image/svg+xml' }; res.writeHead(200, { 'Content-Type': types[ext] || 'application/octet-stream' }); if (req.method === 'HEAD') return res.end(); fs.createReadStream(file).pipe(res);
   } catch(err) { json(res,400,{error: err.message || 'Invalid request'}); }
 };
 const server = http.createServer(requestHandler);
