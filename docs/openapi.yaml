@@ -1,0 +1,51 @@
+openapi: 3.1.0
+info:
+  title: Khashana Attack Surface Intelligence API
+  version: 1.0.0
+  description: Local-only simulated assessment API. Production use requires authentication and authorization.
+paths:
+  /api/dashboard:
+    get:
+      summary: Get organization assessment summary
+      responses: {'200': {description: Dashboard data}}
+  /api/assets:
+    get:
+      summary: List normalized assets and risk scores
+      responses: {'200': {description: Assets}}
+  /api/findings:
+    get:
+      summary: List normalized findings
+      responses: {'200': {description: Findings}}
+  /api/scans:
+    post:
+      summary: Normalize an authorized local-lab discovery fixture
+      requestBody:
+        required: true
+        content: {application/json: {schema: {$ref: '#/components/schemas/ScanRequest'}}}
+      responses:
+        '202': {description: Synthetic local scan accepted}
+        '403': {description: Non-local target rejected}
+  /api/findings/{findingId}/review:
+    post:
+      summary: Record a researcher decision
+      parameters: [{name: findingId, in: path, required: true, schema: {type: string}}]
+      requestBody:
+        required: true
+        content: {application/json: {schema: {$ref: '#/components/schemas/Review'}}}
+      responses: {'200': {description: Saved review}, '400': {description: Invalid state}}
+  /api/reports/executive.pdf:
+    get:
+      summary: Generate a synthetic executive PDF
+      responses: {'200': {description: PDF, content: {application/pdf: {}}}}
+components:
+  schemas:
+    ScanRequest:
+      type: object
+      required: [target]
+      properties: {target: {type: string, example: northstar.local}}
+    Review:
+      type: object
+      properties:
+        status: {type: string, enum: [Detected, Needs Validation, Validated, False Positive, Accepted Risk, Remediated, Retest Required, Closed]}
+        notes: {type: string, maxLength: 4000}
+        validation: {type: string, maxLength: 4000}

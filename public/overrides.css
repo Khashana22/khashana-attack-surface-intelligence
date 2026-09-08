@@ -1,0 +1,5 @@
+/* Keeps the relationship map legible on compact desktop screens. */
+.surface-map{overflow:hidden}
+.map-row{display:grid;grid-template-columns:repeat(3,minmax(135px,1fr));align-items:stretch;gap:18px;min-width:0}
+.map-asset .node{min-width:0;width:100%}
+@media(max-width:600px){.map-row{grid-template-columns:1fr}}

@@ -1,0 +1,11 @@
+const test = require('node:test');
+const assert = require('node:assert/strict');
+const {server,risk,assets} = require('../server');
+let port;
+test.before(async()=>{await new Promise(resolve=>server.listen(0,()=>{port=server.address().port;resolve()}));});
+test.after(()=>server.close());
+test('risk model is deterministic and bounded',()=>{const result=risk(assets[1]);assert.equal(result.level,'High');assert.ok(result.score<=100&&result.score>=0);});
+test('dashboard is available',async()=>{const r=await fetch(`http://127.0.0.1:${port}/api/dashboard`);const data=await r.json();assert.equal(r.status,200);assert.equal(data.organization.name,'Northstar Labs');assert.equal(data.metrics.assets,6);});
+test('scan policy blocks arbitrary internet targets',async()=>{const r=await fetch(`http://127.0.0.1:${port}/api/scans`,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({target:'example.com'})});assert.equal(r.status,403);});
+test('local fixture target is accepted without scanning',async()=>{const r=await fetch(`http://127.0.0.1:${port}/api/scans`,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({target:'northstar.local'})});const d=await r.json();assert.equal(r.status,202);assert.match(d.message,/No network scan/);});
+test('review state validates input',async()=>{const bad=await fetch(`http://127.0.0.1:${port}/api/findings/SK-ASM-001/review`,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({status:'Definitely Bad'})});assert.equal(bad.status,400);const good=await fetch(`http://127.0.0.1:${port}/api/findings/SK-ASM-001/review`,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({status:'Validated',notes:'Synthetic review'})});assert.equal(good.status,200);});
