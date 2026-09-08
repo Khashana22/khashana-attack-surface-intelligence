@@ -38,6 +38,8 @@ Khashana Attack Surface Intelligence demonstrates how a security researcher can 
 ├── .github/
 │   └── workflows/
 │       └── ci.yml               # Automated lint, test, and container build
+├── api/
+│   └── index.js                 # Serverless entrypoint for cloud deployment (Vercel)
 ├── database/
 │   └── schema.sql               # PostgreSQL schema with audit logs and scope enforcement
 ├── docs/
@@ -61,7 +63,8 @@ Khashana Attack Surface Intelligence demonstrates how a security researcher can 
 ├── docker-compose.yml           # Local-lab orchestration with isolated network
 ├── package.json                 # Scripts and engine definitions
 ├── package-lock.json            # Deterministic dependency lockfile
-└── server.js                    # Core HTTP server, synthetic risk engine & reporting
+├── server.js                    # Core HTTP server, synthetic risk engine & reporting
+└── vercel.json                  # Cloud routing and API rewrites configuration
 ```
 
 ## Installation & Local Setup

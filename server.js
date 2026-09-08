@@ -36,13 +36,22 @@ function dashboard() {
   const decorated = assets.map(publicAsset), open = findings.filter(f => !['Closed','False Positive','Remediated'].includes(f.status));
   return { organization:{id:'org-001',name:'Northstar Labs',classification:'SIMULATED SECURITY ASSESSMENT · TRAINING ENVIRONMENT'}, metrics:{assets:assets.length,live:assets.filter(x=>x.status==='Live').length,highRisk:decorated.filter(x=>x.risk.level==='High').length,openFindings:open.length,critical:findings.filter(x=>x.severity==='Critical').length}, assets:decorated, findings, changes:[{type:'New asset',value:'staging.northstar.local',date:'2026-09-07'},{type:'New asset',value:'dev.northstar.local',date:'2026-09-07'},{type:'Resolved finding',value:'SK-ASM-003 — legacy TLS protocol',date:'2026-09-08'}], generatedAt:now };
 }
-function body(req) { return new Promise((resolve,reject)=>{ let data=''; req.on('data',c=>{data+=c;if(data.length>100000) req.destroy();}); req.on('end',()=>{try{resolve(data?JSON.parse(data):{});}catch(e){reject(e);}}); }); }
+function body(req) {
+  if (req.body !== undefined && req.body !== null) {
+    if (typeof req.body === 'string') {
+      try { return Promise.resolve(JSON.parse(req.body)); } catch(e) { return Promise.reject(e); }
+    }
+    return Promise.resolve(req.body);
+  }
+  return new Promise((resolve,reject)=>{ let data=''; req.on('data',c=>{data+=c;if(data.length>100000) req.destroy();}); req.on('end',()=>{try{resolve(data?JSON.parse(data):{});}catch(e){reject(e);}}); });
+}
 function safeFile(urlPath) { const p = path.normalize(path.join(ROOT,'public',urlPath === '/' ? 'index.html' : urlPath)); return p.startsWith(path.join(ROOT,'public')) ? p : null; }
 function pdf(text) { const clean=text.replace(/[()\\]/g,'').slice(0,1200); const content=`BT /F1 18 Tf 50 760 Td (Khashana Attack Surface Intelligence) Tj 0 -28 Td /F1 11 Tf (SIMULATED SECURITY ASSESSMENT - Northstar Labs) Tj 0 -34 Td (${clean}) Tj 0 -38 Td (Prepared by Sayed Khashana | Web & API Security Researcher) Tj ET`;
   const objs=['<< /Type /Catalog /Pages 2 0 R >>','<< /Type /Pages /Kids [3 0 R] /Count 1 >>','<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>','<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>',`<< /Length ${Buffer.byteLength(content)} >>\nstream\n${content}\nendstream`];
   let out='%PDF-1.4\n', offsets=[0]; objs.forEach((o,i)=>{offsets.push(Buffer.byteLength(out));out+=`${i+1} 0 obj\n${o}\nendobj\n`;}); const xref=Buffer.byteLength(out);out+=`xref\n0 ${objs.length+1}\n0000000000 65535 f \n`+offsets.slice(1).map(x=>String(x).padStart(10,'0')+' 00000 n \n').join('')+`trailer\n<< /Size ${objs.length+1} /Root 1 0 R >>\nstartxref\n${xref}\n%%EOF`; return Buffer.from(out); }
-const server = http.createServer(async (req,res) => {
-  const url = new URL(req.url,`http://${req.headers.host}`); const headers={'X-Content-Type-Options':'nosniff','X-Frame-Options':'DENY','Referrer-Policy':'no-referrer','Permissions-Policy':'geolocation=(), microphone=(), camera=()','Content-Security-Policy':"default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:"}; Object.entries(headers).forEach(([k,v])=>res.setHeader(k,v));
+const requestHandler = async (req,res) => {
+  const host = req.headers.host || 'localhost';
+  const url = new URL(req.url,`http://${host}`); const headers={'X-Content-Type-Options':'nosniff','X-Frame-Options':'DENY','Referrer-Policy':'no-referrer','Permissions-Policy':'geolocation=(), microphone=(), camera=()','Content-Security-Policy':"default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:"}; Object.entries(headers).forEach(([k,v])=>res.setHeader(k,v));
   try {
     if (req.method==='GET' && url.pathname==='/api/dashboard') return json(res,200,dashboard());
     if (req.method==='GET' && url.pathname==='/api/assets') return json(res,200,assets.map(publicAsset));
@@ -54,6 +63,12 @@ const server = http.createServer(async (req,res) => {
     if(req.method!=='GET') return json(res,405,{error:'Method not allowed'});
     const file=safeFile(url.pathname); if(!file || !fs.existsSync(file)) return json(res,404,{error:'Not found'}); const ext=path.extname(file); const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml'}; res.writeHead(200,{'Content-Type':types[ext]||'application/octet-stream'}); fs.createReadStream(file).pipe(res);
   } catch(err) { json(res,400,{error:'Invalid request'}); }
-});
+};
+const server = http.createServer(requestHandler);
 if(require.main===module) server.listen(PORT,()=>console.log(`KASI local demo running at http://localhost:${PORT}`));
-module.exports={server,risk,assets,findings};
+requestHandler.server = server;
+requestHandler.risk = risk;
+requestHandler.assets = assets;
+requestHandler.findings = findings;
+module.exports = requestHandler;
+
