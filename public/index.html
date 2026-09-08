@@ -1,14 +1,345 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Local-only simulated attack surface intelligence platform"><title>Khashana Attack Surface Intelligence</title><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/overrides.css"></head><body>
-<div class="notice">SIMULATED SECURITY ASSESSMENT <span>·</span> TRAINING ENVIRONMENT <span>·</span> LOCAL-LAB DATA ONLY</div>
-<aside><a class="brand" href="#dashboard"><span class="mark">K</span><span>Khashana <b>ASI</b><small>Attack Surface Intelligence</small></span></a><nav>
-<a class="active" href="#dashboard">Overview</a><a href="#assets">Asset Inventory</a><a href="#surface">Attack Surface</a><a href="#findings">Findings</a><a href="#risk">Risk Prioritization</a><a href="#changes">Changes</a><a href="#reports">Reports</a><a href="#methodology">Methodology</a></nav><div class="sidebar-foot">Northstar Labs<br><small>Fictional organization · Demo data</small></div></aside>
-<main><header><div><p class="eyebrow">EXTERNAL ATTACK SURFACE DISCOVERY & VULNERABILITY PRIORITIZATION</p><h1 id="page-title">Security intelligence, with human judgment.</h1></div><div class="actions"><button class="ghost" id="scan-btn">Run local-lab discovery</button><a class="button" href="/api/reports/executive.pdf">Download report</a></div></header>
-<section id="dashboard" class="view active"><div class="intro"><div><h2>Northstar Labs</h2><p>Turn exposure signals into a defensible path to remediation. Automated discovery surfaces evidence; the researcher validates what matters.</p></div><div class="scope"><b>Authorized scope</b><span>*.northstar.local</span><small>Local training environment only</small></div></div><div id="metrics" class="metrics"></div><div class="grid two"><article class="panel"><div class="panel-title"><div><p class="eyebrow">RISK POSTURE</p><h3>Risk distribution</h3></div><span class="chip medium">Needs attention</span></div><div class="risk-bars" id="risk-bars"></div><p class="muted">Priority combines criticality, exposure, environment, authentication surface, severity, and confidence—not finding counts alone.</p></article><article class="panel"><div class="panel-title"><div><p class="eyebrow">CONTINUOUS VIEW</p><h3>Recent surface changes</h3></div><a href="#changes">View changes →</a></div><div id="recent-changes" class="timeline"></div></article></div><article class="panel"><div class="panel-title"><div><p class="eyebrow">RESEARCHER QUEUE</p><h3>Signals awaiting a human decision</h3></div><a href="#findings">Open findings →</a></div><div id="queue"></div></article></section>
-<section id="assets" class="view"><div class="section-heading"><div><p class="eyebrow">DISCOVER · CLASSIFY · UNDERSTAND</p><h2>Asset inventory</h2><p>Each observed asset carries environment, ownership, technology, exposure, and contextual risk.</p></div><label class="search">Search assets <input id="asset-search" placeholder="hostname, owner, technology"></label></div><article class="panel table-wrap"><table><thead><tr><th>Asset</th><th>Environment</th><th>Exposure</th><th>Technology</th><th>Owner</th><th>Risk</th></tr></thead><tbody id="asset-table"></tbody></table></article></section>
-<section id="surface" class="view"><div class="section-heading"><div><p class="eyebrow">MAP · CORRELATE · EXPLORE</p><h2>Attack surface map</h2><p>Relationships across domain, applications, services, technologies, and potential issues.</p></div></div><article class="surface-map"><div class="node org"><small>ORGANIZATION</small>Northstar Labs</div><div class="connector"></div><div class="map-row" id="surface-map"></div></article><div class="legend"><span><i class="dot production"></i>Production</span><span><i class="dot staging"></i>Staging</span><span><i class="dot development"></i>Development</span><span><i class="dot administrative"></i>Administrative</span></div></section>
-<section id="findings" class="view"><div class="section-heading"><div><p class="eyebrow">DETECTION ≠ VALIDATION</p><h2>Findings & researcher review</h2><p>Scanner-like signals are tracked separately from the researcher’s decision and evidence.</p></div><select id="finding-filter"><option>All states</option><option>Needs Validation</option><option>Validated</option><option>Remediated</option><option>Accepted Risk</option></select></div><div id="finding-list" class="finding-list"></div></section>
-<section id="risk" class="view"><div class="section-heading"><div><p class="eyebrow">PRIORITIZE WITH CONTEXT</p><h2>Risk model</h2><p>Rank assets based on impact and exposure, then interpret findings with confidence and validation state.</p></div></div><div class="grid two"><article class="panel"><h3>Asset score composition</h3><ol class="model"><li><b>Business criticality</b><span>0–45 points</span></li><li><b>Environment & exposure</b><span>7–15 points</span></li><li><b>Authentication surface</b><span>8–13 points</span></li><li><b>Open finding severity × confidence</b><span>0–30+ points</span></li></ol><p class="muted">Scores cap at 100. Remediated, closed, and false-positive signals are excluded.</p></article><article class="panel"><h3>Priority order</h3><div id="risk-order" class="priority-list"></div></article></div></section>
-<section id="changes" class="view"><div class="section-heading"><div><p class="eyebrow">BASELINE · DIFF · REASSESS</p><h2>Change detection</h2><p>Baseline: 4 assets on 01 Sep 2026. Current observation: 6 assets.</p></div></div><article class="panel"><div class="before-after"><div><span class="date">BEFORE · 01 SEP</span><h3>4 assets</h3><p>Known production application, API, administrative, and docs hosts.</p></div><div class="arrow">→</div><div><span class="date">AFTER · 08 SEP</span><h3>6 assets</h3><p>New staging and development assets require triage and ownership confirmation.</p></div></div></article><article class="panel"><h3>Observed deltas</h3><div id="all-changes" class="timeline"></div></article></section>
-<section id="reports" class="view"><div class="section-heading"><div><p class="eyebrow">COMMUNICATE · REMEDIATE · VERIFY</p><h2>Client-ready reporting</h2><p>Clear executive context and technical evidence, explicitly labelled as a simulated training assessment.</p></div></div><div class="report-card"><div><p class="eyebrow">EXECUTIVE REPORT · PDF</p><h2>Northstar Labs<br>External Exposure Review</h2><p>Current exposure, highest priorities, remediation direction, and reassessment status.</p><a class="button" href="/api/reports/executive.pdf">Download sample PDF</a></div><div class="report-stats"><b>6</b><span>Assets observed</span><b>3</b><span>Open signals</span><b>1</b><span>Retested remediation</span></div></div></section>
-<section id="methodology" class="view"><div class="section-heading"><div><p class="eyebrow">REPEATABLE & EXPLAINABLE</p><h2>Assessment methodology</h2></div></div><div class="journey"><div>1 <b>Authorized scope</b></div><div>2 <b>Discover & map</b></div><div>3 <b>Classify</b></div><div>4 <b>Correlate risk</b></div><div>5 <b>Human validation</b></div><div>6 <b>Report & retest</b></div></div><article class="panel"><h3>What a client gets</h3><p>Asset inventory · attack surface map · contextual risk priorities · validation evidence · executive and technical reporting · remediation guidance · reassessment view.</p></article></section>
-</main><dialog id="review-modal"><form method="dialog"><button class="close" value="cancel">×</button><p class="eyebrow">SECURITY RESEARCHER REVIEW</p><h2 id="review-title">Review finding</h2><label>Decision<select id="review-status"><option>Needs Validation</option><option>Validated</option><option>False Positive</option><option>Accepted Risk</option><option>Remediated</option><option>Retest Required</option><option>Closed</option></select></label><label>Researcher’s observation<textarea id="review-notes" placeholder="ADD MY OWN OBSERVATION"></textarea></label><label>Validation evidence<textarea id="review-validation" placeholder="ADD VALIDATION DETAILS"></textarea></label><button class="button" id="save-review" value="default">Save reviewer decision</button></form></dialog><div id="toast" role="status"></div><script src="/app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Security-researcher-oriented external attack surface discovery and vulnerability prioritization platform for controlled security assessments.">
+  <title>Khashana Attack Surface Intelligence | External Attack Surface Discovery & Vulnerability Prioritization</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/overrides.css">
+</head>
+<body>
+  <div class="notice" role="alert">
+    <span>CONTROLLED SECURITY ASSESSMENT</span> · <span>SYNTHETIC LAB DATASET</span> · <span>NO THIRD-PARTY SCANNING</span>
+  </div>
+
+  <aside aria-label="Main Navigation">
+    <a class="brand" href="#dashboard">
+      <span class="mark" aria-hidden="true">K</span>
+      <span>
+        Khashana <b>ASI</b>
+        <small>Attack Surface Intelligence</small>
+      </span>
+    </a>
+    <nav aria-label="Platform Views">
+      <a class="active" href="#dashboard" aria-current="page">Overview</a>
+      <a href="#assets">Asset Inventory</a>
+      <a href="#surface">Attack Surface</a>
+      <a href="#findings">Findings & Review</a>
+      <a href="#risk">Risk Prioritization</a>
+      <a href="#changes">Changes & Baseline</a>
+      <a href="#reports">Executive Reports</a>
+      <a href="#methodology">Methodology</a>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="target-badge">
+        <span class="status-indicator"></span>
+        <span>Target: <b>Northstar Labs</b></span>
+      </div>
+      <small>Controlled Lab Simulation · Demo Dataset</small>
+    </div>
+  </aside>
+
+  <main>
+    <header>
+      <div>
+        <p class="eyebrow">EXTERNAL ATTACK SURFACE DISCOVERY &amp; VULNERABILITY PRIORITIZATION</p>
+        <h1 id="page-title">Security intelligence, with human judgment.</h1>
+      </div>
+      <div class="actions">
+        <button class="ghost" id="scan-btn" aria-label="Run local lab discovery simulation">Simulate lab discovery</button>
+        <a class="button" href="/api/reports/executive.pdf" aria-label="Download executive report in PDF format">Download executive PDF</a>
+      </div>
+    </header>
+
+    <!-- 1. DASHBOARD OVERVIEW -->
+    <section id="dashboard" class="view active" aria-labelledby="page-title">
+      <div class="intro">
+        <div>
+          <h2>Northstar Labs</h2>
+          <p>Transform raw exposure signals into a defensible remediation roadmap. Automated discovery surfaces evidence; the security researcher validates real-world exploitability and business impact.</p>
+        </div>
+        <div class="scope">
+          <b>Authorized scope</b>
+          <span>*.northstar.local</span>
+          <small>Controlled training environment only</small>
+        </div>
+      </div>
+
+      <!-- PRODUCT STORY BANNER -->
+      <div class="story-grid">
+        <div class="story-card">
+          <span class="story-label">WHAT IS THIS?</span>
+          <h4>Attack Surface Intelligence</h4>
+          <p>A security-researcher console demonstrating how exposed assets are cataloged, classified, contextualized, and prioritized.</p>
+        </div>
+        <div class="story-card">
+          <span class="story-label">WHAT DOES IT DO?</span>
+          <h4>Exposure &amp; Risk Correlation</h4>
+          <p>Maps internet-reachable assets, correlates exposures with business criticality, and detects infrastructure drift against baselines.</p>
+        </div>
+        <div class="story-card">
+          <span class="story-label">WHO IS IT FOR?</span>
+          <h4>Security Consultants &amp; Red Teams</h4>
+          <p>Built for penetration testers, security engineers, and consultants delivering client-ready external attack surface assessments.</p>
+        </div>
+        <div class="story-card highlight">
+          <span class="story-label">SECURITY MODEL</span>
+          <h4>Human-Validated Intelligence</h4>
+          <p>Automated Discovery → Contextual Intelligence → Security Researcher Review → Defensible Remediation Verification.</p>
+        </div>
+      </div>
+
+      <!-- KPI METRICS -->
+      <div id="metrics" class="metrics" role="region" aria-label="Key Metrics"></div>
+
+      <div class="grid two">
+        <article class="panel">
+          <div class="panel-title">
+            <div>
+              <p class="eyebrow">RISK POSTURE</p>
+              <h3>Risk distribution</h3>
+            </div>
+            <span class="chip medium">Needs attention</span>
+          </div>
+          <div class="risk-bars" id="risk-bars"></div>
+          <p class="muted">Priority integrates business criticality, environment, exposure, authentication surface, severity, and confidence—not finding counts alone.</p>
+        </article>
+
+        <article class="panel">
+          <div class="panel-title">
+            <div>
+              <p class="eyebrow">CONTINUOUS VIEW</p>
+              <h3>Recent surface changes</h3>
+            </div>
+            <a href="#changes">View changes →</a>
+          </div>
+          <div id="recent-changes" class="timeline"></div>
+        </article>
+      </div>
+
+      <article class="panel">
+        <div class="panel-title">
+          <div>
+            <p class="eyebrow">RESEARCHER QUEUE</p>
+            <h3>Signals awaiting a human decision</h3>
+          </div>
+          <a href="#findings">Open findings →</a>
+        </div>
+        <div id="queue"></div>
+      </article>
+    </section>
+
+    <!-- 2. ASSET INVENTORY -->
+    <section id="assets" class="view" aria-label="Asset Inventory">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">DISCOVER · CLASSIFY · UNDERSTAND</p>
+          <h2>Asset inventory</h2>
+          <p>Each observed asset carries environment, ownership, technology stack, exposure footprint, and contextual risk scoring.</p>
+        </div>
+        <label class="search" for="asset-search">
+          Search assets
+          <input id="asset-search" type="search" placeholder="hostname, owner, technology" aria-label="Filter asset inventory">
+        </label>
+      </div>
+      <article class="panel table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Asset</th>
+              <th scope="col">Environment</th>
+              <th scope="col">Exposure</th>
+              <th scope="col">Technology</th>
+              <th scope="col">Owner</th>
+              <th scope="col">Risk</th>
+            </tr>
+          </thead>
+          <tbody id="asset-table"></tbody>
+        </table>
+      </article>
+    </section>
+
+    <!-- 3. ATTACK SURFACE MAP -->
+    <section id="surface" class="view" aria-label="Attack Surface Map">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">MAP · CORRELATE · EXPLORE</p>
+          <h2>Attack surface map</h2>
+          <p>Topological relationships across root organization, services, endpoints, technologies, and active vulnerability signals.</p>
+        </div>
+      </div>
+      <article class="surface-map">
+        <div class="node org"><small>ORGANIZATION</small>Northstar Labs</div>
+        <div class="connector"></div>
+        <div class="map-row" id="surface-map"></div>
+      </article>
+      <div class="legend">
+        <span><i class="dot production"></i>Production</span>
+        <span><i class="dot staging"></i>Staging</span>
+        <span><i class="dot development"></i>Development</span>
+        <span><i class="dot administrative"></i>Administrative</span>
+      </div>
+    </section>
+
+    <!-- 4. FINDINGS & RESEARCHER REVIEW -->
+    <section id="findings" class="view" aria-label="Findings & Review">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">DETECTION ≠ VALIDATION</p>
+          <h2>Findings &amp; researcher review</h2>
+          <p>Automated signals are strictly segregated from the researcher’s validated findings, proof of exploitability, and risk acceptance.</p>
+        </div>
+        <label for="finding-filter" class="filter-wrap">
+          <span class="visually-hidden">Filter finding state</span>
+          <select id="finding-filter" aria-label="Filter findings by validation state">
+            <option>All states</option>
+            <option>Needs Validation</option>
+            <option>Validated</option>
+            <option>Remediated</option>
+            <option>Accepted Risk</option>
+          </select>
+        </label>
+      </div>
+      <div id="finding-list" class="finding-list"></div>
+    </section>
+
+    <!-- 5. RISK PRIORITIZATION MODEL -->
+    <section id="risk" class="view" aria-label="Risk Prioritization">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PRIORITIZE WITH CONTEXT</p>
+          <h2>Risk model</h2>
+          <p>Rank exposed assets based on impact, environment, and attack surface, then adjust for confidence and validation state.</p>
+        </div>
+      </div>
+      <div class="grid two">
+        <article class="panel">
+          <h3>Asset score composition</h3>
+          <ol class="model">
+            <li><b>Business criticality</b><span>0–45 points</span></li>
+            <li><b>Environment &amp; exposure</b><span>7–15 points</span></li>
+            <li><b>Authentication surface</b><span>8–13 points</span></li>
+            <li><b>Open finding severity × confidence</b><span>0–30+ points</span></li>
+          </ol>
+          <p class="muted">Scores cap at 100. Remediated, closed, and false-positive signals are excluded from active calculations.</p>
+        </article>
+        <article class="panel">
+          <h3>Priority order</h3>
+          <div id="risk-order" class="priority-list"></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 6. CHANGE DETECTION -->
+    <section id="changes" class="view" aria-label="Change Detection">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">BASELINE · DIFF · REASSESS</p>
+          <h2>Change detection</h2>
+          <p>Baseline: 4 assets observed on 01 Sep 2026. Current discovery: 6 assets with newly introduced staging/dev services.</p>
+        </div>
+      </div>
+      <article class="panel">
+        <div class="before-after">
+          <div>
+            <span class="date">BASELINE · 01 SEP</span>
+            <h3>4 assets</h3>
+            <p>Known production application, API, administrative portal, and documentation hosts.</p>
+          </div>
+          <div class="arrow" aria-hidden="true">→</div>
+          <div>
+            <span class="date">DELTA · 08 SEP</span>
+            <h3>6 assets</h3>
+            <p>Unannounced staging and development hosts require security triage and ownership attribution.</p>
+          </div>
+        </div>
+      </article>
+      <article class="panel">
+        <h3>Observed deltas</h3>
+        <div id="all-changes" class="timeline"></div>
+      </article>
+    </section>
+
+    <!-- 7. EXECUTIVE REPORTING -->
+    <section id="reports" class="view" aria-label="Executive Reports">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">COMMUNICATE · REMEDIATE · VERIFY</p>
+          <h2>Client-ready reporting</h2>
+          <p>Executive risk summaries and technical evidence packages designed for board presentations, engineering handoffs, and compliance audits.</p>
+        </div>
+      </div>
+      <div class="report-card">
+        <div>
+          <p class="eyebrow">EXECUTIVE REPORT · PDF</p>
+          <h2>Northstar Labs<br>External Exposure Review</h2>
+          <p>Comprehensive posture evaluation, highest prioritized risks, business impact analysis, and retest evidence.</p>
+          <a class="button" href="/api/reports/executive.pdf">Download sample PDF</a>
+        </div>
+        <div class="report-stats">
+          <b>6</b><span>Assets observed</span>
+          <b>3</b><span>Open signals</span>
+          <b>1</b><span>Retested remediation</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. METHODOLOGY -->
+    <section id="methodology" class="view" aria-label="Assessment Methodology">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">REPEATABLE &amp; EXPLAINABLE</p>
+          <h2>Assessment methodology</h2>
+          <p>Defensible 6-stage security assessment methodology balancing automation speed with human validation rigor.</p>
+        </div>
+      </div>
+      <div class="journey">
+        <div>1 <b>Authorized scope</b><small>Target boundary definition</small></div>
+        <div>2 <b>Discover &amp; map</b><small>DNS, services, endpoints</small></div>
+        <div>3 <b>Classify</b><small>Environment &amp; ownership</small></div>
+        <div>4 <b>Correlate risk</b><small>Contextual scoring</small></div>
+        <div>5 <b>Human validation</b><small>Exploitability proof</small></div>
+        <div>6 <b>Report &amp; retest</b><small>Actionable remediation</small></div>
+      </div>
+      <article class="panel">
+        <h3>Client Deliverable Package</h3>
+        <p class="muted">Every assessment engagement includes: Complete asset inventory · Interactive attack surface map · Context-weighted risk rankings · Validated technical proof-of-concepts · Executive &amp; technical PDF reports · Concrete remediation guidance · Follow-up verification retest.</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- RESEARCHER REVIEW MODAL -->
+  <dialog id="review-modal" aria-labelledby="review-title">
+    <form method="dialog">
+      <button class="close" value="cancel" aria-label="Close review dialog">×</button>
+      <p class="eyebrow">SECURITY RESEARCHER REVIEW</p>
+      <h2 id="review-title">Review finding</h2>
+      <label for="review-status">
+        Decision
+        <select id="review-status">
+          <option>Needs Validation</option>
+          <option>Validated</option>
+          <option>False Positive</option>
+          <option>Accepted Risk</option>
+          <option>Remediated</option>
+          <option>Retest Required</option>
+          <option>Closed</option>
+        </select>
+      </label>
+      <label for="review-notes">
+        Researcher’s observation
+        <textarea id="review-notes" placeholder="Document exploitability context, exposure nuances, and business relevance..."></textarea>
+      </label>
+      <label for="review-validation">
+        Validation evidence
+        <textarea id="review-validation" placeholder="Paste proof-of-concept requests, header dumps, or verification logs..."></textarea>
+      </label>
+      <button class="button" id="save-review" value="default">Save reviewer decision</button>
+    </form>
+  </dialog>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,5 +1,23 @@
 /* Keeps the relationship map legible on compact desktop screens. */
-.surface-map{overflow:hidden}
-.map-row{display:grid;grid-template-columns:repeat(3,minmax(135px,1fr));align-items:stretch;gap:18px;min-width:0}
-.map-asset .node{min-width:0;width:100%}
-@media(max-width:600px){.map-row{grid-template-columns:1fr}}
+.surface-map { overflow-x: auto; }
+.map-row { display: grid; grid-template-columns: repeat(3, minmax(140px, 1fr)); align-items: stretch; gap: 18px; min-width: 0; }
+.map-asset .node { min-width: 0; width: 100%; }
+
+/* Enhanced focus indicators for accessibility (WCAG 2.1 AA) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--blue-glow);
+  outline-offset: 2px;
+}
+
+@media (max-width: 800px) {
+  .map-row { grid-template-columns: repeat(2, minmax(130px, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .map-row { grid-template-columns: 1fr; }
+}
+

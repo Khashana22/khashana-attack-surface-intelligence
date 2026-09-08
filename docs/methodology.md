@@ -1,23 +1,55 @@
-# Security methodology
+# Security Assessment Methodology
 
-## Scope and authorization
+**Author**: Sayed Khashana — Web & API Security Researcher
 
-Every assessment begins with documented scope and authorization. This demonstration locks automation to `.local` targets and identifies Northstar Labs as fictional training data.
+A professional external attack surface assessment combines rapid, repeatable automated discovery with rigorous human security validation. This document defines the operational methodology implemented in the Khashana Attack Surface Intelligence platform.
 
-## Workflow
+---
 
-1. **Discover** — collect authorized DNS, HTTP, TLS, and service observations from a local lab.
-2. **Classify** — identify environment, asset type, owner, sensitive function, and authentication surface.
-3. **Analyze** — normalize tool signals into assets, services, technologies, endpoints, and evidence.
-4. **Correlate** — calculate risk in business context; signal severity is only one input.
-5. **Validate** — a researcher determines whether a signal is validated, a false positive, accepted risk, or needs investigation.
-6. **Report** — communicate exposure, impact, evidence, priorities, and remediation actions for technical and executive audiences.
-7. **Retest** — compare the new observation with the baseline and preserve proof of remediation.
+## 1. Scope & Legal Authorization
 
-## Detection is not validation
+Every legitimate security assessment begins with explicit written authorization defining:
+- Permitted target domains, CIDR ranges, and specific endpoints.
+- Explicit out-of-scope targets (e.g., third-party SaaS dependencies, shared hosting infrastructure, payment processors).
+- Testing window constraints and emergency contacts.
 
-Automation is useful for surfacing signals. It cannot by itself establish exploitability, business relevance, compensating controls, or client risk acceptance. The platform keeps scanner-like detection records separate from editable researcher reviews and status history.
+In this portfolio application, discovery routes are bounded by policy to `.local` lab targets (`*.northstar.local`), demonstrating how automated systems must enforce scope constraints to prevent unauthorized scanning.
 
-## Controlled evidence
+---
 
-Evidence in the demo is synthetic and local: request/response metadata, timestamps, asset attribution, review fields, and state. No claims are made about real targets or real-world exploitability.
+## 2. The 7-Stage Intelligence Lifecycle
+
+```mermaid
+flowchart LR
+  A[1. Discover] --> B[2. Classify]
+  B --> C[3. Analyze]
+  C --> D[4. Correlate]
+  D --> E[5. Validate]
+  E --> F[6. Report]
+  F --> G[7. Retest]
+```
+
+1. **Discover**: Enumerate domain hierarchy, DNS records, public IP spaces, open ports, and HTTP/TLS endpoints across the target perimeter.
+2. **Classify**: Identify environment tier (Production, Staging, Development, Administrative), service types, technological components, and organizational ownership.
+3. **Analyze**: Normalize disparate scanner outputs, banner grabs, and response headers into a unified asset intelligence schema.
+4. **Correlate**: Calculate multi-dimensional risk scores. Business criticality, environmental isolation, and exposed authentication surfaces are weighed alongside raw vulnerability severity.
+5. **Validate**: A security researcher examines technical evidence to verify real-world exploitability, eliminate false positives, and document contextual impact.
+6. **Report**: Deliver concise executive risk summaries for non-technical leadership alongside detailed technical remediation guidance for engineers.
+7. **Retest**: Diff new infrastructure observations against historical baselines to verify remediation and detect unauthorized surface drift.
+
+---
+
+## 3. Core Principle: Detection Is Not Validation
+
+Commercial automated scanners frequently misinterpret benign responses as critical flaws or overlook high-risk exposures due to lack of business context.
+
+The Khashana ASI platform strictly enforces a separation between:
+- **Automated Detection Record**: Immutable raw telemetry captured by scanning mechanisms (timestamps, endpoints, headers, banners).
+- **Researcher Review & Validation**: Human-editable decisions, exploitability notes, and formal status transitions (`Needs Validation` → `Validated` | `False Positive` | `Accepted Risk`).
+
+---
+
+## 4. Controlled Synthetic Evidence
+
+The assessment data featured in this platform represents a controlled synthetic security simulation for the fictional organization **Northstar Labs**. All network fixtures, response headers, and risk metrics are designed to demonstrate a realistic assessment workflow without scanning third-party infrastructure.
+

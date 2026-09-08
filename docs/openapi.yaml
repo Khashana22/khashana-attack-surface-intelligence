@@ -2,7 +2,7 @@ openapi: 3.1.0
 info:
   title: Khashana Attack Surface Intelligence API
   version: 1.0.0
-  description: Local-only simulated assessment API. Production use requires authentication and authorization.
+  description: External attack surface intelligence and vulnerability prioritization API for controlled security assessments. Built for Northstar Labs synthetic dataset.
 paths:
   /api/dashboard:
     get:

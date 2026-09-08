@@ -2,7 +2,7 @@
   "name": "khashana-attack-surface-intelligence",
   "version": "1.0.0",
   "private": true,
-  "description": "A local-only, simulated attack surface intelligence portfolio platform.",
+  "description": "External attack surface intelligence and vulnerability prioritization platform for controlled security assessments.",
   "scripts": {
     "start": "node server.js",
     "test": "node --test",
