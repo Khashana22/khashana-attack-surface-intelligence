@@ -53,11 +53,20 @@ const requestHandler = async (req,res) => {
   const host = req.headers.host || 'localhost';
   const url = new URL(req.url,`http://${host}`); const headers={'X-Content-Type-Options':'nosniff','X-Frame-Options':'DENY','Referrer-Policy':'no-referrer','Permissions-Policy':'geolocation=(), microphone=(), camera=()','Content-Security-Policy':"default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data:"}; Object.entries(headers).forEach(([k,v])=>res.setHeader(k,v));
   try {
-    const route = url.pathname.startsWith('/api') ? url.pathname : '/api' + (url.pathname === '/' ? '' : url.pathname);
+    let effectivePath = url.pathname;
+    if (req.headers['x-matched-path']) {
+      effectivePath = req.headers['x-matched-path'].split('?')[0];
+    } else if (req.headers['x-forwarded-uri']) {
+      effectivePath = req.headers['x-forwarded-uri'].split('?')[0];
+    } else if (url.searchParams.has('__path')) {
+      const p = url.searchParams.get('__path');
+      effectivePath = p.startsWith('/') ? p : '/api/' + p;
+    }
+    const route = effectivePath.startsWith('/api') ? effectivePath : '/api' + (effectivePath === '/' ? '' : effectivePath);
+    if (req.method==='GET' && (route==='/api' || route==='/api/health')) return json(res,200,{status:'ok',mode:'synthetic-local-demo',time:now});
     if (req.method==='GET' && route==='/api/dashboard') return json(res,200,dashboard());
     if (req.method==='GET' && route==='/api/assets') return json(res,200,assets.map(publicAsset));
     if (req.method==='GET' && route==='/api/findings') return json(res,200,findings);
-    if (req.method==='GET' && route==='/api/health') return json(res,200,{status:'ok',mode:'synthetic-local-demo',time:now});
     if (req.method==='POST' && route==='/api/scans') { const data=await body(req); if (!String(data.target||'').endsWith('.local')) return json(res,403,{error:'Local-lab-only policy: targets must end in .local. No scan was performed.'}); return json(res,202,{id:crypto.randomUUID(),status:'completed',target:data.target,message:'Synthetic local-lab fixture normalized. No network scan was executed.'}); }
     if (req.method==='POST' && /^\/api\/findings\/[^/]+\/review$/.test(route)) { const id=route.split('/')[3], data=await body(req), finding=findings.find(f=>f.id===id); if(!finding) return json(res,404,{error:'Finding not found'}); const allowed=['Validated','False Positive','Needs Validation','Accepted Risk','Remediated','Retest Required','Closed']; if(data.status && !allowed.includes(data.status)) return json(res,400,{error:'Invalid finding state'}); finding.status=data.status||finding.status; finding.notes=String(data.notes||'').slice(0,4000); finding.validation=String(data.validation||'').slice(0,4000); reviews[id]={...data,updatedAt:new Date().toISOString()}; return json(res,200,{finding,review:reviews[id]}); }
     if (req.method==='GET' && route==='/api/reports/executive.pdf') { const d=dashboard(); const report=pdf(`Executive summary: ${d.metrics.assets} assets observed; ${d.metrics.openFindings} open findings; highest priority: ${findings[1].id} on dev.northstar.local needs researcher validation.`); res.writeHead(200,{'Content-Type':'application/pdf','Content-Disposition':'attachment; filename="northstar-executive-report.pdf"','Content-Length':report.length}); return res.end(report); }
