@@ -72,7 +72,7 @@ const requestHandler = async (req,res) => {
     if (req.method==='GET' && route==='/api/reports/executive.pdf') { const d=dashboard(); const report=pdf(`Executive summary: ${d.metrics.assets} assets observed; ${d.metrics.openFindings} open findings; highest priority: ${findings[1].id} on dev.northstar.local needs researcher validation.`); res.writeHead(200,{'Content-Type':'application/pdf','Content-Disposition':'attachment; filename="northstar-executive-report.pdf"','Content-Length':report.length}); return res.end(report); }
     if(req.method!=='GET') return json(res,405,{error:'Method not allowed'});
     const file=safeFile(url.pathname); if(!file || !fs.existsSync(file)) return json(res,404,{error:'Not found'}); const ext=path.extname(file); const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml'}; res.writeHead(200,{'Content-Type':types[ext]||'application/octet-stream'}); fs.createReadStream(file).pipe(res);
-  } catch(err) { json(res,400,{error:'Invalid request'}); }
+  } catch(err) { json(res,400,{error: err.message || 'Invalid request'}); }
 };
 const server = http.createServer(requestHandler);
 if(require.main===module) server.listen(PORT,()=>console.log(`KASI local demo running at http://localhost:${PORT}`));
